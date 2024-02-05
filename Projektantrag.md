@@ -20,6 +20,14 @@ Ziel des Projekts ist es, eine Webapplikation zu erstellen, welche es ermöglich
 
 Dabei ist uns wichtig, dass man übersichtlich auf die Mitschriften zu ganz bestimmten Themen zugreifen kann, sowie nach Fach und Jahrgang filtern kann. Die Webseite soll außerdem eine Funktion bieten, mit der man bestimmte/zufällige Beispiele zu einem bestimmten Thema lösen kann. Wenn man die eigene Lösung dann eingibt, erfährt man, ob es richtig ist, und man erhält den richtigen Lösungsweg. Parallel dazu gibt es den Prüfungsmodus, bei der eine Schularbeit/ein Test simuliert wird. Man erhält mehrere Aufgaben, die man in einem bestimmten Zeitfenster lösen muss. Die richtige Lösung und den Lösungsweg erfährt man erst bei Ablauf der Zeit oder frühzeitiger Abgabe.
 
+## SMART
+- Spezifisch (Specific): Die Ziele des LearnHub-Projekts sind klar definiert, z. B. die Entwicklung einer Webanwendung für den Austausch von Unterrichtsmaterialien.
+- Messbar (Measurable): Der Erfolg des Projekts kann anhand von quantifizierbaren Kriterien wie der Anzahl der hochgeladenen Materialien, der Benutzerzufriedenheit und der Erfüllung der Projektziele gemessen werden.
+- Erreichbar (Achievable): Die Ziele des LearnHub-Projekts sind realistisch und durch die verfügbaren Ressourcen und Fähigkeiten des Projektteams erreichbar.
+- Relevant (Relevant): Das LearnHub-Projekt ist für Schüler, Lehrer und Bildungsinstitutionen relevant, da es den Lernprozess unterstützt und die Bildungsgemeinschaft stärkt.
+- Zeitgebunden (Time-bound): Es gibt einen klaren Zeitrahmen für die Fertigstellung des Projekts bis zum Ende des nächsten Schuljahres, was sicherstellt, dass die Ziele innerhalb eines bestimmten Zeitraums erreicht werden sollen.
+
+
 ## Sinn/Zweck
 
 - Optimierung des Lernprozesses für SchülerInnen
