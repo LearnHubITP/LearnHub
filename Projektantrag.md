@@ -24,8 +24,8 @@ Dabei ist uns wichtig, dass man übersichtlich auf die Mitschriften zu ganz best
 - Spezifisch (Specific): Die Ziele des LearnHub-Projekts sind klar definiert, z. B. die Entwicklung einer Webanwendung für den Austausch von Unterrichtsmaterialien.
 - Messbar (Measurable): Der Erfolg des Projekts kann anhand von quantifizierbaren Kriterien wie der Anzahl der hochgeladenen Materialien, der Benutzerzufriedenheit und der Erfüllung der Projektziele gemessen werden.
 - Erreichbar (Achievable): Die Ziele des LearnHub-Projekts sind realistisch und durch die verfügbaren Ressourcen und Fähigkeiten des Projektteams erreichbar.
-- Relevant (Relevant): Das LearnHub-Projekt ist für Schüler, Lehrer und Bildungsinstitutionen relevant, da es den Lernprozess unterstützt und die Bildungsgemeinschaft stärkt.
-- Zeitgebunden (Time-bound): Es gibt einen klaren Zeitrahmen für die Fertigstellung des Projekts bis zum Ende des nächsten Schuljahres, was sicherstellt, dass die Ziele innerhalb eines bestimmten Zeitraums erreicht werden sollen.
+- Relevant (Relevant): Das LearnHub-Projekt ist für Schüler relevant, da es den Lernprozess unterstützt und die Bildungsgemeinschaft stärkt.
+- Zeitgebunden (Time-bound): Es gibt einen klaren Zeitrahmen für die Fertigstellung des Projekts bis zum Ende des Schuljahres, was sicherstellt, dass die Ziele innerhalb eines bestimmten Zeitraums erreicht werden sollen.
 
 
 ## Sinn/Zweck
