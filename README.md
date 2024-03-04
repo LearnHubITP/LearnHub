@@ -1,4 +1,4 @@
-﻿#LearnHub
+##LearnHub
 
 **Teammitglieder:** Baumann Isabella, Gossenreiter Thomas, Hochbichler Lien, Steinmair Stefanie
 
