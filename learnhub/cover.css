@@ -48,3 +48,58 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+#gridWhatLearnhub{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 15vw;
+}
+
+#gridWhatLearnhub img{
+  width: 20vw;
+}
+
+#gridWhatLearnhub p{
+  text-align: left;
+  width: 30vw;
+  height: 20vh;
+}
+
+#gridWithTeam{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#gridWithTeam img{
+  width: 20vw;
+  margin-left: -12vw;
+}
+
+#gridWithTeam p{
+  margin-left: 21vw;
+  margin-top: 6vw;
+  width: 30vw;
+  height: 2vh;
+  text-align: left;
+}
+
+#gridWithTeamRight{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#gridWithTeamRight img{
+  width: 20vw;
+  margin-left: 19vw;
+}
+
+#gridWithTeamRight p{
+  margin-top: 6vw;
+  width: 30vw;
+  height: 2vh;
+  margin-left: -15vw;
+  text-align: left;
+}
+
