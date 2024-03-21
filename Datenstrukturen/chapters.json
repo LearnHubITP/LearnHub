@@ -1,0 +1,10 @@
+{
+    "chapters":[
+        {
+            "id": 1,
+            "name": "Funktionen",
+            "subject": "subject_id",
+            "year": "year_id"
+        }
+    ]
+}
