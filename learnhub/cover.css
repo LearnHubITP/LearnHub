@@ -103,3 +103,26 @@ body {
   text-align: left;
 }
 
+.mb-auto{
+  position:fixed ;
+  background-color: orange;
+  width: 100vw;      
+  padding: 0.5vw;
+  z-index: 1000000;
+}
+
+.mb-auto div nav a{
+  display: block;
+  text-align: center;
+}
+
+header .mb-auto nav.nav a{
+  text-align: center;
+}
+
+.px-3{
+  margin-top: 2.5vw;
+}
+header{
+  top: 0;
+}
