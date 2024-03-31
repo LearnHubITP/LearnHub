@@ -10,12 +10,16 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.122.0">
   <title>Homepage - Learnhub</title>
-
+  <link rel="icon" type="image/x-icon" href="./img/learnHub_Logo.png">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
   <link href="./bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    body {
+      overflow-x: hidden;
+    }
+
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -30,14 +34,7 @@
       }
     }
 
-    .b-example-divider {
-      width: 100%;
-      height: 3rem;
-      background-color: rgba(0, 0, 0, .1);
-      border: solid rgba(0, 0, 0, .15);
-      border-width: 1px 0;
-      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-    }
+
 
     .b-example-vr {
       flex-shrink: 0;
@@ -68,23 +65,6 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    .btn-bd-primary {
-      --bd-violet-bg: #712cf9;
-      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-      --bs-btn-font-weight: 600;
-      --bs-btn-color: var(--bs-white);
-      --bs-btn-bg: var(--bd-violet-bg);
-      --bs-btn-border-color: var(--bd-violet-bg);
-      --bs-btn-hover-color: var(--bs-white);
-      --bs-btn-hover-bg: #6528e0;
-      --bs-btn-hover-border-color: #6528e0;
-      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-      --bs-btn-active-color: var(--bs-btn-hover-color);
-      --bs-btn-active-bg: #5a23c8;
-      --bs-btn-active-border-color: #5a23c8;
-    }
-
     .bd-mode-toggle {
       z-index: 1500;
     }
@@ -92,173 +72,206 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
-    
 
-    
+    .backgroundImgLearnHub {
+      margin-bottom: 10vw;
+      margin-top: -10vw;
+    }
+
+    .backgroundImgLearnHub img {
+      width: 100vw;
+      filter: brightness(50%);
+      opacity: .9;
+
+    }
+
+    #starttxt {
+      border: dashed 1px white;
+      width: 40vw;
+      position: relative;
+      margin-top: -35vw;
+      margin-left: 32vw;
+      padding: 2vw;
+    }
+
+    #starttxt h1 {
+      color: orange;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #starttxt li {
+      margin-bottom: 1.8vw;
+      margin-top: 1vw;
+      font-size: 1vw;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+    }
+
+    .learnMore {
+      background-color: white;
+      text-decoration: none;
+      padding: 0.8vw;
+      border-radius: 10px;
+      margin-top: 1vw;
+      color: orange;
+      transition: ease-in-out 0.3s;
+      margin-left: 13vw;
+    }
+
+    .learnMore:hover {
+      background-color: orange;
+      color: white;
+      transition: ease-in-out 0.3s;
+    }
+
+    #whatsLearnhub {
+      margin-left: -25vw;
+      margin-top: 2vw;
+      margin-bottom: 2.5vw;
+    }
+
+    #gridWhatLearnhub {
+      border-top: 1px solid orange;
+      width: 90vw;
+      margin-left: auto;
+      display: block;
+      margin-right: auto;
+      padding-top: 5vw;
+    }
+
+    #team {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: orange;
+      padding: 5vw;
+    }
+
+    #gridWhatLearnhub img {
+      width: 30vw;
+    }
+
+    #learnhubEx {
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: white;
+      padding: 5vw;
+      margin-bottom: 12vw;
+    }
   </style>
 
   <!-- Custom styles for this template -->
   <link href="cover.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-bg-dark">
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-    <symbol id="check2" viewBox="0 0 16 16">
-      <path
-        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
-    </symbol>
-    <symbol id="circle-half" viewBox="0 0 16 16">
-      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-    </symbol>
-    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-      <path
-        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-      <path
-        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-    </symbol>
-    <symbol id="sun-fill" viewBox="0 0 16 16">
-      <path
-        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-    </symbol>
-  </svg>
-
-  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-        <use href="#circle-half"></use>
-      </svg>
-      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#sun-fill"></use>
-          </svg>
-          Light
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#moon-stars-fill"></use>
-          </svg>
-          Dark
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#circle-half"></use>
-          </svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
+<header class="mb-auto">
+  <div>
+    <nav class="nav nav-masthead justify-content-center">
+      <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+      <a class="nav-link fw-bold py-1 px-0" href="./content.html">Content</a>
+      <a class="nav-link fw-bold py-1 px-0" href="./team.html">Team</a>
+    </nav>
   </div>
+</header>
 
-  <header class="mb-auto">
+
+
+<main class="backgroundImgLearnHub">
+  <img src="./img/home/pexels-andrea-piacquadio-3807755.jpg" alt="" srcset="">
+  <div id="starttxt">
+    <h1>Learnhub</h1>
+    <li>SchülerInnen helfen SchülerInnen </li>
+    <li>Gemeinschaftlicher Austausch von Unterrichtsmaterialien</li>
+    <li>Interaktives Üben durch prüfungsähnliche Aufgaben</li>
+    <li>Förderung einer gemeinschaftlichen Lernumgebung</li>
+    <p class="lead">
+      <a href="./learnhub.html#gridWhatLearnhub" class="learnMore">Erfahre mehr</a>
+    </p>
+  </div>
+</main>
+
+<div>
+  <h1 id="whatsLearnhub">Was ist Learnhub</h1>
+
+  <div id="gridWhatLearnhub">
     <div>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="./content.html">Content</a>
-        <a class="nav-link fw-bold py-1 px-0" href="./team.html">Team</a>
-      </nav>
+      <img class="imgLearn" src="./img/home/geometry-1698595_1280.png" alt="" srcset="">
+      <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
+        zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
+        Thema. </p>
     </div>
-  </header>
+    <div>
+      <img class="imgLearn" src="./img/home/woman-8500892_1280.jpg" alt="" srcset="">
+      <p> Die Bildungslandschaft steht vor der Herausforderung, Schülerinnen und Schülern sowie Maturantinnen und
+        Maturanten effektive Werkzeuge zur Verfügung zu stellen, um den Lernprozess zu optimieren und den Zugang zu
+        Unterrichtsmaterialien zu erleichtern. </p>
+    </div>
+  </div>
+</div>
 
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    
+<div id="team">
+  <div id="gridWhatLearnhub">
+    <div>
+      <img src="./img/home/pexels-andrea-piacquadio-3808021.jpg" alt="" srcset="">
+    </div>
+    <div>
+      <h1>Team</h1>
+      <p>Unser Team setzt sich aus vier SchülerInnen der HTL Leonding zusammen. Wir engagieren uns gemeinschaftlich in
+        der Entwicklung dieses Projekts für das kommende Schuljahr. </p>
+      <a href="./team.html" class="learnMore">Unser Team kennenlernen</a>
+    </div>
+  </div>
+</div>
 
-    <main class="px-3">
-      <h1>Cover your page.</h1>
-      <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the
-        text, and add your own fullscreen background photo to make it your own.</p>
-      <p class="lead">
-        <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
-      </p>
-    </main>
+
+<div id="learnhubEx">
+  <div id="gridWhatLearnhub">
+    <div>
+      <h1>Learnhub</h1>
+      <p> Da Schüler unterschiedliche Lehrer und Lehrmethoden erleben, kann dies zu verschiedenen Blickwinkeln und
+        Interpretationen des Unterrichtsstoffs führen. Die Webanwendung bietet daher eine Plattform, auf der Schüler
+        nicht nur auf die Materialien ihrer eigenen Lehrer zugreifen können, sondern auch auf die von anderen Lehrern.
+        Dies fördert eine vielfältige Sichtweise auf den Stoff und ermöglicht es den Schülern, verschiedene Lehransätze
+        zu verstehen und zu integrieren. Insgesamt zielt dieses Projekt darauf ab, eine umfassende, online-basierte
+        Lernplattform zu schaffen, die den Schülern ermöglicht, effizienter zu lernen, sich besser auf Prüfungen
+        vorzubereiten und die Bildungsgemeinschaft zu stärken. Durch die gemeinsame Nutzung von Ressourcen wird nicht
+        nur das individuelle Lernen gefördert, sondern auch ein unterstützendes Netzwerk geschaffen, das den
+        Bildungserfolg jedes Einzelnen fördert.</p>
+    </div>
 
     <div>
-      <div id="gridWhatLearnhub">
-        <div>
-          <img src="./img/home/pexels-vlada-karpovich-4050415.jpg" alt="" srcset="">
-          <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
-            zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
-            Thema </p>
-        </div>
-        <div>
-          <img src="./img/home/pexels-vlada-karpovich-4050315.jpg" alt="" srcset="">
-          <p> Die Bildungslandschaft steht vor der Herausforderung, Schülerinnen und Schülern sowie Maturantinnen und
-            Maturanten effektive Werkzeuge zur Verfügung zu stellen, um den Lernprozess zu optimieren und den Zugang zu
-            Unterrichtsmaterialien zu erleichtern. </p>
-        </div>
-      </div>
+      <img src="./img/home/pexels-andrea-piacquadio-3808021.jpg" alt="" srcset="">
     </div>
 
+  </div>
+</div>
+
+<div>
+  <div id="gridWhatLearnhub">
     <div>
-      <div id="gridWithTeam">
-          <div>
-            <img src="./img/home/pexels-andrea-piacquadio-3808021.jpg" alt="" srcset="">
-          </div>
-          <div>
-            <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
-              zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
-              Thema </p>
-          </div>
-      </div>
-
-      <div>
-        <div id="gridWithTeamRight">
-          <div>
-            <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
-              zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
-              Thema </p>
-          </div>
-            <div>
-              <img src="./img/home/pexels-andrea-piacquadio-3808018.jpg" alt="" srcset="">
-            </div>
-        </div>
-      </div>
-
-
-      <div>
-        <div id="gridWhatLearnhub">
-          <div>
-            <img src="./img/home/pexels-andrea-piacquadio-3808016.jpg" alt="" srcset="">
-            <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
-              zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
-              Thema </p>
-          </div>
-          <div>
-            <img src="./img/home/pexels-andrea-piacquadio-3807755.jpg" alt="" srcset="">
-            <p> Die Bildungslandschaft steht vor der Herausforderung, Schülerinnen und Schülern sowie Maturantinnen und
-              Maturanten effektive Werkzeuge zur Verfügung zu stellen, um den Lernprozess zu optimieren und den Zugang zu
-              Unterrichtsmaterialien zu erleichtern. </p>
-          </div>
-          <a href="./teams.html">submit</button>
-        </div>
-      </div>
-  
-      <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
-            href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-      </footer>
+      <img src="./img/home/pexels-andrea-piacquadio-3808016.jpg" alt="" srcset="">
+      <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
+        zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
+        Thema </p>
     </div>
-    <script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <div>
+      <img src="./img/home/pexels-andrea-piacquadio-3807755.jpg" alt="" srcset="">
+      <p> Die Bildungslandschaft steht vor der Herausforderung, Schülerinnen und Schülern sowie Maturantinnen und
+        Maturanten effektive Werkzeuge zur Verfügung zu stellen, um den Lernprozess zu optimieren und den Zugang zu
+        Unterrichtsmaterialien zu erleichtern. </p>
+    </div>
+    <a href="./teams.html">submit</button>
+  </div>
+</div>
+
+<footer class="mt-auto text-white-50">
+  <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
+      href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+</footer>
+
+
+<script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
