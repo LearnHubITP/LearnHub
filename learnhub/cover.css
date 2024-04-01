@@ -55,44 +55,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 15vw;
+  margin-bottom: 3vw;
 }
 
 #gridWhatLearnhub img{
-  width: 20vw;
+  width: 35vw;
+  border: solid 0.5px #eec19e;
 }
 
 #gridWhatLearnhub p{
-  text-align: left;
-  width: 30vw;
-  height: 20vh;
-}
-
-#gridWithTeam{
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-#gridWithTeam img{
-  width: 20vw;
-  margin-left: -12vw;
-}
-
-#gridWithTeam p{
-  margin-left: 21vw;
-  margin-top: 6vw;
-  width: 30vw;
-  height: 2vh;
-  text-align: left;
-}
-
-#gridWithTeamRight{
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-#gridWithTeamRight img{
-  width: 20vw;
-  margin-left: 19vw;
+  width: 35vw;
 }
 
 #gridWithTeamRight p{
@@ -107,7 +79,7 @@ body {
   position:fixed ;
   background-color: orange;
   width: 100vw;      
-  padding: 0.5vw;
+  padding: 0.9vw;
   z-index: 1000000;
 }
 
@@ -125,4 +97,137 @@ header .mb-auto nav.nav a{
 }
 header{
   top: 0;
+}
+
+.backgroundImgLearnHub {
+  margin-bottom: 10vw;
+  margin-top: -10vw;
+}
+
+.backgroundImgLearnHub img {
+  width: 100vw;
+  filter: brightness(50%);
+  opacity: .9;
+
+}
+
+#starttxt {
+  border: dashed 1px white;
+  width: 40vw;
+  position: relative;
+  margin-top: -35vw;
+  margin-left: 32vw;
+  padding: 2vw;
+}
+
+#starttxt h1 {
+  color: orange;
+  font-weight: bold;
+  text-align: center;
+}
+
+#starttxt li {
+  margin-bottom: 1.8vw;
+  margin-top: 1vw;
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.learnMore {
+  background-color: white;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 10px;
+  margin-top: 1vw;
+  color: orange;
+  transition: ease-in-out 0.3s;
+  margin-left: 13vw;
+}
+
+.learnMore:hover {
+  background-color: orange;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.learnMore2 {
+  background-color: black;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 10px;
+  margin-top: 1vw;
+  color: white;
+  transition: ease-in-out 0.3s;
+  margin-top: 2vw;
+}
+
+.learnMore2:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out 0.3s;
+}
+
+.learnMore3 {
+  background-color: black;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 10px;
+  margin-top: 1vw;
+  color: white;
+  transition: ease-in-out 0.3s;
+  margin-top: 2vw;
+  width: 20vw;
+}
+
+.learnMore3:hover {
+  background-color: white;
+  color: black;
+  transition: ease-in-out 0.3s;
+}
+
+#teamSen p{
+  margin-bottom: 3vw;
+}
+
+#whatsLearnhub {
+  padding: 3vw;
+}
+
+
+#team {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #eec19e;
+  padding: 5vw;
+}
+
+#learnhubEx {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+  padding: 5vw;
+}
+
+#course{
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #eec19e;
+  padding: 5vw;
+  margin-top: -5vw;
+}
+#whatsLearnhub2{
+  background-color: #eec19e;
+  padding: 5vw;
+  position: relative;
+}
+#course h2{
+  margin-bottom: 2vw;
+}
+
+#logoHeader{
+  width: 4vw;
+  position: absolute;
+  top: 0vw;
 }

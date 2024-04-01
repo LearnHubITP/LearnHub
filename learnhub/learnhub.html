@@ -13,7 +13,7 @@
   <link rel="icon" type="image/x-icon" href="./img/learnHub_Logo.png">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
+  <link rel="stylesheet" href="cover.css">
   <link href="./bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -33,8 +33,6 @@
         font-size: 3.5rem;
       }
     }
-
-
 
     .b-example-vr {
       flex-shrink: 0;
@@ -72,93 +70,6 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
-
-    .backgroundImgLearnHub {
-      margin-bottom: 10vw;
-      margin-top: -10vw;
-    }
-
-    .backgroundImgLearnHub img {
-      width: 100vw;
-      filter: brightness(50%);
-      opacity: .9;
-
-    }
-
-    #starttxt {
-      border: dashed 1px white;
-      width: 40vw;
-      position: relative;
-      margin-top: -35vw;
-      margin-left: 32vw;
-      padding: 2vw;
-    }
-
-    #starttxt h1 {
-      color: orange;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    #starttxt li {
-      margin-bottom: 1.8vw;
-      margin-top: 1vw;
-      font-size: 1vw;
-      font-weight: bold;
-      text-align: center;
-      color: white;
-    }
-
-    .learnMore {
-      background-color: white;
-      text-decoration: none;
-      padding: 0.8vw;
-      border-radius: 10px;
-      margin-top: 1vw;
-      color: orange;
-      transition: ease-in-out 0.3s;
-      margin-left: 13vw;
-    }
-
-    .learnMore:hover {
-      background-color: orange;
-      color: white;
-      transition: ease-in-out 0.3s;
-    }
-
-    #whatsLearnhub {
-      margin-left: -25vw;
-      margin-top: 2vw;
-      margin-bottom: 2.5vw;
-    }
-
-    #gridWhatLearnhub {
-      border-top: 1px solid orange;
-      width: 90vw;
-      margin-left: auto;
-      display: block;
-      margin-right: auto;
-      padding-top: 5vw;
-    }
-
-    #team {
-      display: grid;
-      grid-template-columns: auto auto;
-      background-color: orange;
-      padding: 5vw;
-    }
-
-    #gridWhatLearnhub img {
-      width: 30vw;
-    }
-
-    #learnhubEx {
-      display: grid;
-      grid-template-columns: auto auto;
-      background-color: white;
-      padding: 5vw;
-      margin-bottom: 12vw;
-    }
   </style>
 
   <!-- Custom styles for this template -->
@@ -167,6 +78,7 @@
 
 <header class="mb-auto">
   <div>
+    <img id="logoHeader" src="./img/learnHub_Logo.png" alt="" srcset="">
     <nav class="nav nav-masthead justify-content-center">
       <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
       <a class="nav-link fw-bold py-1 px-0" href="./content.html">Content</a>
@@ -196,7 +108,7 @@
 
   <div id="gridWhatLearnhub">
     <div>
-      <img class="imgLearn" src="./img/home/geometry-1698595_1280.png" alt="" srcset="">
+      <img class="imgLearn" src="./img/home/webinar-5331602_1280.png" alt="" srcset="">
       <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
         zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
         Thema. </p>
@@ -215,11 +127,11 @@
     <div>
       <img src="./img/home/pexels-andrea-piacquadio-3808021.jpg" alt="" srcset="">
     </div>
-    <div>
+    <div id="teamSen">
       <h1>Team</h1>
       <p>Unser Team setzt sich aus vier SchülerInnen der HTL Leonding zusammen. Wir engagieren uns gemeinschaftlich in
         der Entwicklung dieses Projekts für das kommende Schuljahr. </p>
-      <a href="./team.html" class="learnMore">Unser Team kennenlernen</a>
+      <a href="./team.html" class="learnMore2">Unser Team kennenlernen</a>
     </div>
   </div>
 </div>
@@ -247,34 +159,34 @@
   </div>
 </div>
 
-<div>
+  <h1 id="whatsLearnhub2">Wählen Sie Ihren Kurs</h1>
+
+<div id="course">
   <div id="gridWhatLearnhub">
     <div>
-      <img src="./img/home/pexels-andrea-piacquadio-3808016.jpg" alt="" srcset="">
-      <p>Learnhub ist eine Webapplikation, die es SchülerInnen ermöglicht, Unterrichtsmitschriften hochzuladen und
-        zu teilen. Die Plattform ermöglicht einen übersichtlichen Zugriff auf Mitschriften nach Fach, Jahrgang und
-        Thema </p>
+      <img src="./img/home/world-4859129_1280.png" alt="" srcset="">
+      <h1>Geografie </h1>
+      <h2>1. - 5. Jahrgang </h2>
+      <p class="lead">
+        <a href="./content.html" class="learnMore3">Los geht's</a>
+      </p>
     </div>
     <div>
-      <img src="./img/home/pexels-andrea-piacquadio-3807755.jpg" alt="" srcset="">
-      <p> Die Bildungslandschaft steht vor der Herausforderung, Schülerinnen und Schülern sowie Maturantinnen und
-        Maturanten effektive Werkzeuge zur Verfügung zu stellen, um den Lernprozess zu optimieren und den Zugang zu
-        Unterrichtsmaterialien zu erleichtern. </p>
+      <img src="./img/home/geometry-1698595_1280.png" alt="" srcset="">
+      <h1>Mathematik </h1>
+      <h2>1. - 5. Jahrgang </h2>
+      <p class="lead">
+        <a href="./content.html" class="learnMore3">Los geht's</a>
+      </p>
     </div>
-    <a href="./teams.html">submit</button>
   </div>
-</div>
-
-<footer class="mt-auto text-white-50">
-  <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
-      href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-</footer>
-
-
-<script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
-</body>
+    <script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    </body>
 
 </html>
