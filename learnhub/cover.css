@@ -233,5 +233,20 @@ header{
 }
 #mainBackground{
   background-color: #eec19e;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contentTeam{
+  margin: 5%;
+}
+.personContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.personContent{
+  padding: 2%;
 }
