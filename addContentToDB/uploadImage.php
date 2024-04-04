@@ -2,6 +2,10 @@
 $target_dir = "../learnhub/img/uploadedImages/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if (isset($_POST["submit"])) {
@@ -43,7 +47,7 @@ if ($uploadOk == 0) {
         $_db_database = "learnhub";
         $_db_username = "learnhub";
         $_db_password = "learnhub";
-        $conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
+        /*$conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
         //Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -55,10 +59,10 @@ if ($uploadOk == 0) {
             echo "<br>NO insertion into database";
         }
         # close database
-        $conn->close();
+        $conn->close();*/
     }
     else{
-        echo "hahdsoöhfösah";
+        echo "<br>Error Moving File";
     }
 }
 include("uploadImage.html");
