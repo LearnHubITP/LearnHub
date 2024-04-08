@@ -11,11 +11,14 @@ if(!empty($_POST["submit"])){
     #get data from POST array and parse database special characters
     $subject = $conn->real_escape_string($_POST["subject"]);
     $chapter = $conn->real_escape_string($_POST["chapter"]);
-    $image = $conn->real_escape_string($_POST["image"]);
+    $image = null;
     $question = $conn->real_escape_string($_POST["question"]);
     $answer = $conn->real_escape_string($_POST["answer"]);
     $multipleChoice = 0;
 
+    if(isset($_POST["image"])){
+        $image = $conn->real_escape_string($_POST["image"]);
+    }
     if(isset($_POST["multiple"])){
         $multipleChoice = 1;
     }
