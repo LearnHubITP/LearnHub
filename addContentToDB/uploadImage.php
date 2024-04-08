@@ -43,15 +43,8 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-        $_db_host = "7.tcp.eu.ngrok.io:10359";
-        $_db_database = "learnhub";
-        $_db_username = "learnhub";
-        $_db_password = "learnhub";
-        /*$conn = new mysqli($_db_host, $_db_username, $_db_passwort, $_db_datenbank);
-        //Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        require "connectToDB.php";
+
         $insertStatement = "INSERT INTO images (id, path) VALUES ('', '$target_file');";
         if ($_res = $conn->query($insertStatement)) {
             echo "<br>Image $target_file has been added to the database.";
@@ -59,7 +52,7 @@ if ($uploadOk == 0) {
             echo "<br>NO insertion into database";
         }
         # close database
-        $conn->close();*/
+        $conn->close();
     }
     else{
         echo "<br>Error Moving File";
