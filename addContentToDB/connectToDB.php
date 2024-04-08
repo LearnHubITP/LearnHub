@@ -1,4 +1,5 @@
 <?php
+/*
 #login data
 $_db_host = "6.tcp.eu.ngrok.io:17644";
 $_db_database = "learnhub";
@@ -15,3 +16,4 @@ $conn = mysqli_connect($_db_host, $_db_username, $_db_password, $_db_database);
 if ($conn->connect_error) {
     die("Connection failed: ". $conn->connect_error);
 }
+*/

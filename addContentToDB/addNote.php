@@ -16,7 +16,7 @@ if(!empty($_POST["submit"])){
 
     if ($chapterId == FALSE){
         echo "Chapter not found";
-        include("addChapter.html");
+        include("addNote.html");
         exit;
     }
 
@@ -26,7 +26,7 @@ if(!empty($_POST["submit"])){
 
     if($imageId == FALSE){
         echo "Image not found";
-        include("addChapter.html");
+        include("addNote.html");
         exit;
     }
 
