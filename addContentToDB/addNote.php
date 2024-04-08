@@ -2,47 +2,52 @@
 
 require "connectToDB.php";
 
-#Connected to database
-if(!empty($_POST["submit"])){
-    #get data from POST array and parse database special characters
+# Connected to database
+if (!empty($_POST["submit"])) {
+    # Get data from POST array and parse database special characters
     $chapter = $conn->real_escape_string($_POST["chapter"]);
     $image = $conn->real_escape_string($_POST["image"]);
 
     # Statement for getting ids of the chapter and image
     $getChapterStatement = "SELECT id from chapters 
-                WHERE name LIKE '$chapter'
-                LIMIT 1";
-    $chapterId = $conn->query($getChapterStatement);
+                            WHERE name LIKE '$chapter'
+                            LIMIT 1";
+    $chapterResult = $conn->query($getChapterStatement);
 
-    if ($chapterId == FALSE){
+    if ($chapterResult === FALSE || $chapterResult->num_rows == 0) {
         echo "Chapter not found";
         include("addNote.html");
         exit;
     }
 
-    $getImageStatement = "SELECT id from images 
-                WHERE path LIKE './img/uploadedImages/$image'";
-    $imageId = $conn->query($getImageStatement);
+    $chapterRow = $chapterResult->fetch_assoc();
+    $chapterId = $chapterRow['id'];
 
-    if($imageId == FALSE){
+    $getImageStatement = "SELECT id from images 
+                            WHERE path LIKE './img/uploadedImages/$image'";
+    $imageResult = $conn->query($getImageStatement);
+
+    if ($imageResult === FALSE || $imageResult->num_rows == 0) {
         echo "Image not found";
         include("addNote.html");
         exit;
     }
 
-    # Statement for inserting values into new subject
-    $insertStatement= "INSERT INTO notes (chapter, image)
-                VALUES ('$chapterId', '$imageId');";
+    $imageRow = $imageResult->fetch_assoc();
+    $imageId = $imageRow['id'];
 
-    if($_res = $conn->query($insertStatement)){
+    # Statement for inserting values into new subject
+    $insertStatement = "INSERT INTO notes (chapter, image)
+                        VALUES ('$chapterId', '$imageId')";
+
+    if ($conn->query($insertStatement) === TRUE) {
         echo "<br>Note has been added to the database.";
         include("addNote.html");
-    }
-    else{
+    } else {
         echo "<br> Something went wrong";
         include("addNote.html");
     }
-}
-else{
+} else {
     include("addNote.html");
 }
+?>

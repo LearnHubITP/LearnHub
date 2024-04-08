@@ -2,13 +2,12 @@
 
 require "connectToDB.php";
 
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-#Connected to database
-if(!empty($_POST["submit"])){
-    #get data from POST array and parse database special characters
+# Connected to database
+if (!empty($_POST["submit"])) {
+    # Get data from POST array and parse database special characters
     $subject = $conn->real_escape_string($_POST["subject"]);
     $chapter = $conn->real_escape_string($_POST["chapter"]);
     $image = null;
@@ -16,60 +15,97 @@ if(!empty($_POST["submit"])){
     $answer = $conn->real_escape_string($_POST["answer"]);
     $multipleChoice = 0;
 
-    if(isset($_POST["image"])){
+    if (isset($_POST["image"])) {
         $image = $conn->real_escape_string($_POST["image"]);
     }
-    if(isset($_POST["multiple"])){
+    if (isset($_POST["multiple"])) {
         $multipleChoice = 1;
     }
 
     # Statement for getting ids of the values
-    $getSubjectStatement = "SELECT id from subjects 
-                WHERE name LIKE '$subject'
-                LIMIT 1";
-    $subjectId = $conn->query($getSubjectStatement);
+    $getSubjectStatement = "SELECT id FROM subjects 
+                            WHERE name LIKE '$subject'
+                            LIMIT 1";
+    $subjectResult = $conn->query($getSubjectStatement);
 
-    if ($subjectId == FALSE){
+    if ($subjectResult === FALSE || $subjectResult->num_rows == 0) {
         echo "Subject not found";
         include("addQuestion.html");
         exit;
     }
 
-    $getChapterStatement = "SELECT id from chapters 
-                WHERE name LIKE '$chapter'";
-    $chapterId = $conn->query($getChapterStatement);
+    $subjectRow = $subjectResult->fetch_assoc();
+    $subjectId = $subjectRow['id'];
 
-    if($chapterId == FALSE){
+    $getChapterStatement = "SELECT id FROM chapters 
+                            WHERE name LIKE '$chapter'";
+    $chapterResult = $conn->query($getChapterStatement);
+
+    if ($chapterResult === FALSE || $chapterResult->num_rows == 0) {
         echo "Chapter not found";
         include("addQuestion.html");
         exit;
     }
 
-    $getImageStatement = "SELECT id from images 
-                WHERE path LIKE './img/uploadedImages/$image'";
-    $imageId = $conn->query($getImageStatement);
+    $chapterRow = $chapterResult->fetch_assoc();
+    $chapterId = $chapterRow['id'];
 
-    if($imageId == FALSE){
-        echo "Image not found";
+    $imageId = null;
+    if ($image !== null) {
+        $getImageStatement = "SELECT id FROM images 
+                                WHERE path LIKE './img/uploadedImages/$image'";
+        $imageResult = $conn->query($getImageStatement);
+
+        if ($imageResult === FALSE || $imageResult->num_rows == 0) {
+            echo "Image not found";
+            include("addQuestion.html");
+            exit;
+        }
+
+        $imageRow = $imageResult->fetch_assoc();
+        $imageId = $imageRow['id'];
+    }
+
+    
+
+    # Statement for inserting values into new question
+    $insertStatement = "INSERT INTO questions (subject, chapter, question, image, multipleChoice)
+                        VALUES ('$subjectId', '$chapterId', '$question', '$imageId', '$multipleChoice')";
+
+    if ($conn->query($insertStatement) === TRUE) {
+        echo "<br>Question has been added to the database.";
+    } else {
+        echo "<br> Something went wrong";
         include("addQuestion.html");
         exit;
     }
 
-    # Statement for inserting values into new question
-    $insertStatement= "INSERT INTO questions (subject, chapter, question, answer, image, multipleChoise)
-                VALUES ('$subjectId', '$chapterId'
-                        '$question', '$answer', 
-                        '$imageId', '$multipleChoice');";
+    $getQuestionStatement = "SELECT id FROM questions
+                            WHERE question LIKE '$question'";
+    $questionResult = $conn->query($getQuestionStatement);
 
-    if($_res = $conn->query($insertStatement)){
-        echo "<br>Question has been added to the database.";
+    if ($questionResult === FALSE || $questionResult->num_rows == 0) {
+        echo "Question created but not found, HUCH?? Des deaf eig ned passieren oiso ka frog in Sysadmin";
         include("addQuestion.html");
+        exit;
     }
-    else{
-        echo "<br> Something went wrong";
+
+    $questionRow = $questionResult->fetch_assoc();
+    $questionId = $questionRow['id'];
+
+    # Statement for inserting values into new answer
+    $insertStatement = "INSERT INTO answers (question, answer)
+                        VALUES ('$questionId', '$answer')";
+
+    if ($conn->query($insertStatement) === TRUE) {
+        echo "<br>Answer has been added to the database.";
         include("addQuestion.html");
+    } else {
+        echo "<br> Something went wrong while adding the answer";
+        include("addQuestion.html");
+        exit;
     }
-}
-else{
+} else {
     include("addQuestion.html");
 }
+

@@ -45,7 +45,7 @@ if ($uploadOk == 0) {
         echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
         require "connectToDB.php";
 
-        $insertStatement = "INSERT INTO images (id, path) VALUES ('', './img/uploadedImages/" . basename($_FILES["fileToUpload"]["name"]) . "');";
+        $insertStatement = "INSERT INTO images (path) VALUES ('./img/uploadedImages/" . basename($_FILES["fileToUpload"]["name"]) . "');";
         if ($_res = $conn->query($insertStatement)) {
             echo "<br>Image $target_file has been added to the database.";
         } else {
