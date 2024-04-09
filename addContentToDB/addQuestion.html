@@ -14,9 +14,17 @@
         Question: <input type="text" name="question"><br>
         Answer: <input type="text" name="answer"><br>
         Image Name(Optional): <input type="text" name="image"><br>
-        Multiple Choice?: <input type="checkbox" name="multiple"><br>
+        Multiple Choice?: <input style="margin-bottom: 1%;" type="checkbox" name="multiple" onchange="showMultiples(this)"><br>
+        <div style="display: none" id="multipleChoiceBox">
+        
+            <div style="display: flex; margin-top: 0.5%;" id="multiple1">
+                <input type="text" name="multipleChoice[]" id="multipleInp1"></input>
+                <p style="margin: 0 2%; cursor: pointer;" onclick="deleteChoice(1)">Delete</p>
+            </div>
+        
+        </div>
+        <p style="display: none; cursor: pointer;" id="+" onclick="addMultipleChoice()">+</p>
         <input type="submit" name="submit" value="Add Question"><br>
     </form>
-    <p onclick="addMultipleChoice()" style="cursor: pointer;">+</p>
 </body>
 </html>

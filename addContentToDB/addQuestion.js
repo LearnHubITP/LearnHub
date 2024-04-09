@@ -1,12 +1,24 @@
-let form = document.getElementById("form");
+let multipleChoiceBox = document.getElementById("multipleChoiceBox");
+let addBox = document.getElementById("+");
 let inputs = [];
 
-let currentMultipleId = 1;
+function showMultiples(element){
+    if(element.checked){
+        multipleChoiceBox.style.display = "block";
+        addBox.style.display = "block";
+    }
+    else{
+        multipleChoiceBox.style.display = "none";
+        addBox.style.display = "none";
+    }
+}
+
+let currentMultipleId = 2;
 function addMultipleChoice(){
     event.preventDefault();
+    inputs = []
     for (let i = 1; i < currentMultipleId; i++) {
-        inputs = []
-        let element = document.getElementById("multipleInp"+(i));
+        let element = document.getElementById(("multipleInp"+i));
         if(element != null && element.value != undefined){
             inputs.push(element.value);
         }
@@ -15,25 +27,26 @@ function addMultipleChoice(){
         }
     }
 
-    form.innerHTML += `
-        <div style="display: flex" id="multiple${currentMultipleId}">
+    multipleChoiceBox.innerHTML += `
+        <div style="display: flex;  margin-top: 0.5%;" id="multiple${currentMultipleId}">
             <input type="text" name="multipleChoice[]" id="multipleInp${currentMultipleId}"></input>
-            <p style="margin: 0" onclick="deleteChoice(${currentMultipleId})">Delete</p>
+            <p style="margin: 0 2%; cursor: pointer;"  onclick="deleteChoice(${currentMultipleId})">Delete</p>
         </div>
         `
-    currentMultipleId++;
-
     console.log(inputs)
     let currentArrayIndex = 0;
-    for (let i = 0; i < currentMultipleId-1; i++) {
-        let element = document.getElementById("multiple"+(i+1));
+    for (let i = 1; i < currentMultipleId; i++) {
+        let element = document.getElementById(("multipleInp"+i));
         if(element != null){
             element.value = inputs[currentArrayIndex];
+            currentArrayIndex++;
         }
     }
+
+    currentMultipleId++;
 }
 
 function deleteChoice(id){
     document.getElementById("multiple"+id).innerHTML = "";
-    choice.parentNode.removeChild(choice);
+    document.getElementById("multiple"+id).style.display = "none";
 }
