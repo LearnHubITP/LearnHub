@@ -15,7 +15,7 @@ if (!empty($_POST["submit"])) {
     $answer = $conn->real_escape_string($_POST["answer"]);
     $multipleChoice = 0;
 
-    if (isset($_POST["image"])) {
+    if (isset($_POST["image"]) && $_POST["image"] != "") {
         $image = $conn->real_escape_string($_POST["image"]);
     }
     if (isset($_POST["multiple"])) {
