@@ -99,12 +99,30 @@ if (!empty($_POST["submit"])) {
 
     if ($conn->query($insertStatement) === TRUE) {
         echo "<br>Answer has been added to the database.";
-        include("addQuestion.html");
     } else {
         echo "<br> Something went wrong while adding the answer";
         include("addQuestion.html");
         exit;
     }
+
+
+    # Statement fo inserting values into multiplechoice
+    if ($multiple = 1) {
+        foreach ($_POST["multipleChoice"] as $value) {
+            $multipleChoiceValue = $conn->real_escape_string($value);
+            
+            $insertStatement = "INSERT INTO choices (question, choice)
+                            VALUES ('$questionId', '$multipleChoiceValue')";
+
+            if ($conn->query($insertStatement) === TRUE) {
+                echo "<br>Choice " . $multipleChoiceValue . " has been added to the database.";
+            } else {
+                echo "<br> Something went wrong while adding the choice " . $multipleChoiceValue;
+            }
+        }
+    }
+
+    include("addQuestion.html");
 } else {
     include("addQuestion.html");
 }
