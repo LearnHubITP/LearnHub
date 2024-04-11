@@ -27,9 +27,27 @@ if(!empty($_POST["submit"])){
         exit;
     }
 
+    $yearIdStatement = "SELECT id FROM years WHERE name = '$year'";
+    if($_res = $conn->query($yearIdStatement)){
+        if($_res->num_rows > 0){
+            $yearId = $_res->fetch_assoc();
+            $yearId = $yearId["id"];
+        }
+        else{
+            echo "Year not found";
+            include("addChapter.html");
+            exit;
+        }
+    }
+    else{
+        echo "An error with the Year occurred";
+        include("addChapter.html");
+        exit;
+    }
+
     # Statement for inserting values into new chapter
     $insertStatement= "INSERT INTO chapters (name, subject, year)
-                VALUES ('$chapterName', '$subjectId', '$year');";
+                VALUES ('$chapterName', '$subjectId', '$yearId');";
 
     if($_res = $conn->query($insertStatement)){
         echo "<br>Chapter $chapterName has been added to the database.";
