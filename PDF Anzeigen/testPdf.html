@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF-Anzeige</title>
+</head>
+<body>
+  <div id="pdf-container"></div>
+
+  <script>
+    // Erstelle ein <object>-Element für das PDF
+    var object = document.createElement('object');
+    object.data = './test.pdf';
+    object.type = 'application/pdf';
+    object.width = '100%';
+    object.height = '600px';
+
+    // Füge das <object>-Element dem Container in der Webseite hinzu
+    var container = document.getElementById('pdf-container');
+    container.appendChild(object);
+  </script>
+</body>
+</html>
