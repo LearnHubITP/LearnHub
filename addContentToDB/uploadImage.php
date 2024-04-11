@@ -31,16 +31,16 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
+if ($_FILES["fileToUpload"]["size"] > 3000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;
 }
 // Allow certain file formats
 if (
     $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif"
+    && $imageFileType != "gif" && $imageFileType != "pdf"
 ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    echo "Sorry, only JPG, JPEG, PNG, PDF & GIF files are allowed.";
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
-        require "connectToDB.php";
+        require "../learnhub/php/connectToDB.php";
 
         $insertStatement = "INSERT INTO images (path) VALUES ('./img/uploadedImages/" . basename($_FILES["fileToUpload"]["name"]) . "');";
         if ($_res = $conn->query($insertStatement)) {

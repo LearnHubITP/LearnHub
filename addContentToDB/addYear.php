@@ -1,6 +1,6 @@
 <?php
 
-require "connectToDB.php";
+require "../learnhub/php/connectToDB.php";
 
 #Connected to database
 if(!empty($_POST["submit"])){
