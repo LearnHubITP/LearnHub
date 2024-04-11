@@ -9,16 +9,22 @@ ini_set('display_errors', 1);
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if (isset($_POST["submit"])) {
+    $allowed_types = array("image/jpeg", "image/png", "image/gif", "application/pdf");
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    echo $check;
-    if ($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+    $file_type = $_FILES["fileToUpload"]["type"];
+    if ($check !== false || in_array($file_type, $allowed_types)) {
+        if (in_array($file_type, $allowed_types)) {
+            echo "File is valid - " . $file_type . ".";
+        } else {
+            echo "File is an image - " . $check["mime"] . ".";
+        }
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        echo "File is not an image or PDF.";
         $uploadOk = 0;
     }
 }
+
 // Check if file already exists
 if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
