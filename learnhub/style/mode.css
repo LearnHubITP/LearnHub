@@ -1,5 +1,112 @@
+/**
+    import der color Variablen
+**/
 @import url("./colors.css");
-.bg-body-tertiary, .personContainer {
-    background-color: var(--bg) !important;
-    color: var(--opposite) !important;
+
+/***team: box team members***/
+.bg-body-tertiary,
+.personContainer {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+}
+
+/**content: box modus choose**/
+.container-2{
+    background-color: var(--beige) !important;
+}
+.container-1{
+    background-color: var(--grey) !important;
+    color: var(--white) !important;
+}
+
+#mainBackground {
+    background-color: var(--lightOrange);
+}
+
+#learnhubEx {
+    grid-template-columns: auto auto;
+}
+
+.learnMore3:hover {
+    background-color: white;
+    color: black;
+}
+
+#whatsLearnhub2,
+#course,
+#team {
+    background-color: var(--lightOrange);
+}
+
+.learnMore3,
+.learnMore2 {
+    background-color: black;
+    color: white;
+}
+
+.learnMore2:hover {
+    background-color: white;
+    color: black;
+}
+
+.learnMore {
+    background-color: white;
+    color: var(--orange);
+}
+
+.learnMore:hover {
+    background-color: orange;
+    color: white;
+}
+
+#starttxt li {
+    color: white;
+}
+
+#starttxt h1 {
+    color: var(--orange);
+}
+
+#starttxt {
+    border: dashed 1px white;
+}
+
+.mb-auto {
+    background-color: orange;
+}
+
+#gridWhatLearnhub img {
+    border: solid 0.5px var(--lightOrange);
+}
+
+.nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link {
+    color: rgba(255, 255, 255, .5);
+}
+
+body {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.btn-light,
+.btn-light:hover,
+.btn-light:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
 }

@@ -4,52 +4,30 @@
 
 
 /* Custom default button */
-.btn-light,
-.btn-light:hover,
-.btn-light:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-}
+
 
 
 /*
  * Base structure
  */
 
-body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
-
 .cover-container {
   max-width: 42em;
 }
-
 
 /*
  * Header
  */
 
 .nav-masthead .nav-link {
-  color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
 }
 
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
+.nav-masthead .nav-link+.nav-link {
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-#gridWhatLearnhub{
+#gridWhatLearnhub {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -58,16 +36,15 @@ body {
   margin-bottom: 3vw;
 }
 
-#gridWhatLearnhub img{
-  width: 35vw;
-  border: solid 0.5px #eec19e;
-}
-
-#gridWhatLearnhub p{
+#gridWhatLearnhub img {
   width: 35vw;
 }
 
-#gridWithTeamRight p{
+#gridWhatLearnhub p {
+  width: 35vw;
+}
+
+#gridWithTeamRight p {
   margin-top: 6vw;
   width: 30vw;
   height: 2vh;
@@ -75,27 +52,27 @@ body {
   text-align: left;
 }
 
-.mb-auto{
-  position:fixed ;
-  background-color: orange;
-  width: 100vw;      
+.mb-auto {
+  position: fixed;
+  width: 100vw;
   padding: 0.9vw;
   z-index: 1000000;
 }
 
-.mb-auto div nav a{
+.mb-auto div nav a {
   display: block;
   text-align: center;
 }
 
-header .mb-auto nav.nav a{
+header .mb-auto nav.nav a {
   text-align: center;
 }
 
-.px-3{
+.px-3 {
   margin-top: 2.5vw;
 }
-header{
+
+header {
   top: 0;
 }
 
@@ -112,7 +89,6 @@ header{
 }
 
 #starttxt {
-  border: dashed 1px white;
   width: 40vw;
   position: relative;
   margin-top: -35vw;
@@ -121,7 +97,6 @@ header{
 }
 
 #starttxt h1 {
-  color: orange;
   font-weight: bold;
   text-align: center;
 }
@@ -132,62 +107,49 @@ header{
   font-size: 1vw;
   font-weight: bold;
   text-align: center;
-  color: white;
 }
 
 .learnMore {
-  background-color: white;
   text-decoration: none;
   padding: 0.8vw;
   border-radius: 10px;
   margin-top: 1vw;
-  color: orange;
   transition: ease-in-out 0.3s;
   margin-left: 13vw;
 }
 
 .learnMore:hover {
-  background-color: orange;
-  color: white;
   transition: ease-in-out 0.3s;
 }
 
 .learnMore2 {
-  background-color: black;
   text-decoration: none;
   padding: 0.8vw;
   border-radius: 10px;
   margin-top: 1vw;
-  color: white;
   transition: ease-in-out 0.3s;
   margin-top: 2vw;
 }
 
 .learnMore2:hover {
-  background-color: white;
-  color: black;
   transition: ease-in-out 0.3s;
 }
 
 .learnMore3 {
-  background-color: black;
   text-decoration: none;
   padding: 0.8vw;
   border-radius: 10px;
   margin-top: 1vw;
-  color: white;
   transition: ease-in-out 0.3s;
   margin-top: 2vw;
   width: 20vw;
 }
 
 .learnMore3:hover {
-  background-color: white;
-  color: black;
   transition: ease-in-out 0.3s;
 }
 
-#teamSen p{
+#teamSen p {
   margin-bottom: 3vw;
 }
 
@@ -199,74 +161,96 @@ header{
 #team {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #eec19e;
   padding: 5vw;
 }
 
 #learnhubEx {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: white;
   padding: 5vw;
 }
 
-#course{
+#course {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #eec19e;
   padding: 5vw;
   margin-top: -5vw;
 }
-#whatsLearnhub2{
-  background-color: #eec19e;
+
+#whatsLearnhub2 {
   padding: 5vw;
   position: relative;
 }
-#course h2{
+
+#course h2 {
   margin-bottom: 2vw;
 }
 
-#logoHeader{
+#logoHeader {
   width: 4vw;
   position: absolute;
   top: 0vw;
 }
-#mainBackground{
-  background-color: #eec19e;
+
+#mainBackground {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#contentTeam{
+
+#contentTeam {
   margin: 5%;
 }
-.personContainer{
+
+.personContainer {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-self: center;
 }
-.personContent:hover{
+
+.personContent:hover {
   cursor: pointer;
 }
-.personContent{
+
+.personContent {
   padding: 2%;
 }
-#contentSec{
+
+#contentSec {
   width: 100vw;
   height: 100%;
 }
-#contentSec img{
+
+#contentSec img {
   width: 100vw;
 }
-.cont1{
+
+.cont1 {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cont11{
+
+.cont11 {
   margin: 10%;
+}
+.cont2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont21 {
+  
+  margin: 10%;
+}
+
+.cont21 img{
+  height: 50%;
 }
