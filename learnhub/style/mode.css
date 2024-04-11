@@ -1,0 +1,5 @@
+@import url("./colors.css");
+.bg-body-tertiary, .personContainer {
+    background-color: var(--bg) !important;
+    color: var(--opposite) !important;
+}

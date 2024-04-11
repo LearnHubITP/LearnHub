@@ -1,0 +1,17 @@
+/**import colours***/
+/**@import url("./colors.css");**/
+:root {
+    --main: #000;
+    --opposite: #fff;
+    --opposite2: #f3f3eb;
+    --bg: #000;
+    --bg2: #333333;
+    --blue1: #03045e;
+    --blue2: #0077b6;
+    --blue2RGBA: rgba(0, 119, 182, 0.7);
+    --blue3: #00b4d8;
+    --blue4: #90e0ef;
+    --blue5: #caf0f8;
+    --black: #000;
+    --white: #fff;
+}
