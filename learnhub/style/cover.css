@@ -214,17 +214,21 @@ header {
   cursor: pointer;
 }
 
+#learnhubEx {
+  grid-template-columns: auto auto;
+}
+
 .personContent {
   padding: 2%;
 }
 
 #contentSec {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 }
 
 #contentSec img {
-  width: 100vw;
+  width: 100%;
 }
 
 .cont1 {
@@ -238,6 +242,7 @@ header {
 .cont11 {
   margin: 10%;
 }
+
 .cont2 {
   width: 100%;
   height: 100%;
@@ -247,10 +252,15 @@ header {
 }
 
 .cont21 {
-  
   margin: 10%;
 }
 
-.cont21 img{
+.cont21 img {
   height: 50%;
+}
+
+.imgAlignContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

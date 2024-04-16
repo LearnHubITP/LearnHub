@@ -11,20 +11,17 @@
 }
 
 /**content: box modus choose**/
-.container-2{
+.container-2 {
     background-color: var(--beige) !important;
 }
-.container-1{
+
+.container-1 {
     background-color: var(--grey) !important;
     color: var(--white) !important;
 }
 
 #mainBackground {
     background-color: var(--lightOrange);
-}
-
-#learnhubEx {
-    grid-template-columns: auto auto;
 }
 
 .learnMore3:hover {
@@ -55,7 +52,7 @@
 }
 
 .learnMore:hover {
-    background-color: orange;
+    background-color: var(--orange);
     color: white;
 }
 
@@ -72,7 +69,7 @@
 }
 
 .mb-auto {
-    background-color: orange;
+    background-color: var(--orange);
 }
 
 #gridWhatLearnhub img {
@@ -108,5 +105,16 @@ body {
 .btn-light:focus {
     color: #333;
     text-shadow: none;
-    /* Prevent inheritance from `body` */
+}
+
+#secHomeWhat{
+    background-color: var(--white);
+}
+
+#whatsLearnhub{
+    color: var(--black);
+}
+
+body{
+    background-color: var(--white);
 }
