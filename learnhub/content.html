@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link rel="stylesheet" href="./style/cover.css">
   <link rel="stylesheet" href="./style/mode.css">
+  <link rel="stylesheet" href="./style/colors.css">
 
   <link href="./bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -141,11 +142,17 @@
       }
 
       .startbutton {
-        width: 10%;
-        background-color: black;
-        border-radius: 10px;
+        cursor: pointer;
+        width: 20%;
+        background-color: var(--orange);
+        border-radius: 30px;
+        padding: 2vh;
         color: white;
         margin: auto;
+        transition: ease-in-out 0.5s;
+      }
+      .startbutton:hover{
+        background-color: var(--lightOrange);
       }
     </style>
     <section id="contentSec"><img src="./img/home/pexels-andrea-piacquadio-3807755.jpg" alt=""></section>
