@@ -47,7 +47,7 @@ if (isset($_GET["chapter"]) && isset($_GET["subject"]) && isset($_GET["year"])) 
         $sqlStatement = "SELECT * FROM chapters WHERE subject = '$subjectId' AND year = '$yearId'";
     }
     else{
-        $sqlStatement = "SELECT * FROM chapters WHERE id = " . $_GET["chapter"] . " AND subject = '$subjectId' AND year = '$yearId'";
+        $sqlStatement = "SELECT * FROM chapters WHERE name = " . $_GET["chapter"] . " AND subject = '$subjectId' AND year = '$yearId'";
     }
 
     if($res =$conn->query($sqlStatement)){
@@ -64,7 +64,7 @@ if (isset($_GET["chapter"]) && isset($_GET["subject"]) && isset($_GET["year"])) 
 //REQUEST FOR NOTES
 else if (isset($_GET["note"]) && isset($_GET["chapter"])) {
     
-    $sqlStatement = "SELECT * FROM chapters WHERE id = " . $_GET["chapter"];
+    $sqlStatement = "SELECT * FROM chapters WHERE name = " . $_GET["chapter"];
     if($res =$conn->query($sqlStatement)){
         if($res->num_rows > 0){
 
