@@ -8,8 +8,8 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
-    RewriteRule ^api/notes/([^/]+)/([^/]+)/?$ /api/api.php?chapter=$1&note=$2 [L,QSA]
-    RewriteRule ^api/chapters/([^/]+)/([^/]+)/([^/]+)/?$ /api/api.php?subject=$1&year=$2&chapter=$3 [L,QSA]
-    RewriteRule ^api/subjects/([^/]+)/?$ /api/api.php?subject=$1 [L,QSA]
-    RewriteRule ^api/years/([^/]+)/?$ /api/api.php?year=$1 [L,QSA]
+    RewriteRule ^api/notes/([^/]+)/([^/]+)/?$ ./api/api.php?chapter=$1&note=$2 [L,QSA]
+    RewriteRule ^api/chapters/([^/]+)/([^/]+)/([^/]+)/?$ ./api/api.php?subject=$1&year=$2&chapter=$3 [L,QSA]
+    RewriteRule ^api/subjects/([^/]+)/?$ ./api/api.php?subject=$1 [L,QSA]
+    RewriteRule ^api/years/([^/]+)/?$ ./api/api.php?year=$1 [L,QSA]
 </IfModule>

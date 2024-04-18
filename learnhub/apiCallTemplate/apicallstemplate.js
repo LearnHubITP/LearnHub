@@ -4,7 +4,7 @@
 // get year
 
 fetch("../php/api/years/")   // + yearname, if you want a specific year
-    .then((response) => response.json())
+    .then((response) => response.text())
     .then((data) => {
         console.log(data);
     })
