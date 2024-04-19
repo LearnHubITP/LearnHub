@@ -117,7 +117,17 @@ else if (isset($_GET["subject"])) {
 
             $answer["code"] = 200;
             while($subject = $res->fetch_assoc()){
-                array_push($answer["result"], array("name"=>$subject["name"]));
+                $imageId = $subject["image"];
+                $sqlStatement = "SELECT * FROM images WHERE id = '$imageId'";
+
+                if($res2 =$conn->query($sqlStatement)){
+                    if($res2->num_rows > 0){
+                        array_push($answer["result"], array(
+                            "name"=>$subject["name"],
+                            "image"=>$res2->fetch_assoc()["path"]
+                        ));
+                    }
+                }
             }
 
         }
