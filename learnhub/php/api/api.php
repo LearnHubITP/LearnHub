@@ -10,7 +10,7 @@ $answer = array(
 
 // REQUEST FOR CHAPTERS
 if (isset($_GET["chapter"]) && isset($_GET["subject"]) && isset($_GET["year"])) {
-    $sqlStatement = "SELECT * FROM subjects WHERE name = " . $_GET["subject"];
+    $sqlStatement = "SELECT * FROM subjects WHERE name = '" . $_GET["subject"] . "'";
     if($res =$conn->query($sqlStatement)){
         if($res->num_rows > 0){
             $subject = $res->fetch_assoc();
@@ -26,7 +26,7 @@ if (isset($_GET["chapter"]) && isset($_GET["subject"]) && isset($_GET["year"])) 
         exit;
     }
 
-    $sqlStatement = "SELECT * FROM years WHERE name = " . $_GET["year"];
+    $sqlStatement = "SELECT * FROM years WHERE name = '" . $_GET["year"] . "'";
     if($res =$conn->query($sqlStatement)){
         if($res->num_rows > 0){
             $year = $res->fetch_assoc();
@@ -64,7 +64,7 @@ if (isset($_GET["chapter"]) && isset($_GET["subject"]) && isset($_GET["year"])) 
 //REQUEST FOR NOTES
 else if (isset($_GET["note"]) && isset($_GET["chapter"])) {
     
-    $sqlStatement = "SELECT * FROM chapters WHERE name = " . $_GET["chapter"];
+    $sqlStatement = "SELECT * FROM chapters WHERE name = '" . $_GET["chapter"] . "'";
     if($res =$conn->query($sqlStatement)){
         if($res->num_rows > 0){
 
