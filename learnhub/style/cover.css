@@ -263,3 +263,35 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.startbutton {
+  cursor: pointer;
+  width: 20%;
+  background-color: var(--orange);
+  border-radius: 30px;
+  padding: 2vh;
+  color: white;
+  margin: auto;
+  transition: ease-in-out 0.5s;
+}
+.startbutton:hover{
+  background-color: var(--lightOrange);
+}
+
+#contentShow{
+  padding-top: 15vh;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#alignShowing{
+  margin-top: 20vh;
+  width: 100%;
+}
+#showSubject{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
