@@ -1,7 +1,7 @@
 <?php
 
 #login data
-$_db_host = "4.tcp.eu.ngrok.io:17695";
+$_db_host = "localhost";
 $_db_database = "learnhub";
 $_db_username = "learnhub";
 $_db_password = "learnhub";
