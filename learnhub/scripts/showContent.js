@@ -18,7 +18,7 @@ function chooseSubject(){
                     i = 0;
                 }
                 html_code += `<div>
-                <img src="./img/home/world-4859129_1280.png" alt="" srcset="">
+                <img src='${data.result[i].image}' alt="" srcset="">
                 <h1 style="margin-bottom: 5%;">${data.result[i].name}</h1>
                 <p class="lead">
                     <a href="./content.html" class="learnMore3">Los geht's</a>
