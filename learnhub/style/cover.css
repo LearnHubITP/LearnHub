@@ -298,3 +298,12 @@ header {
 .imgBox2{
   width: 400vw;
 }
+.getCont{
+  padding: 2% !important;
+  left: 40vw;
+  width: 10vw;
+  z-index: 200;
+  position: absolute;
+  top: 25vw;
+  text-align: center;
+}
