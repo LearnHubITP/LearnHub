@@ -295,3 +295,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.imgBox2{
+  width: 400vw;
+}
