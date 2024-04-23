@@ -69,9 +69,15 @@ if (!empty($_POST["submit"])) {
     
 
     # Statement for inserting values into new question
-    $insertStatement = "INSERT INTO questions (subject, chapter, question, image, multipleChoice)
-                        VALUES ('$subjectId', '$chapterId', '$question', '$imageId', '$multipleChoice')";
+    if($imageId == null){
+        $insertStatement = "INSERT INTO questions (subject, chapter, question, image, multipleChoice)
+                        VALUES ('$subjectId', '$chapterId', '$question', null, '$multipleChoice')";
 
+    } else{
+        $insertStatement = "INSERT INTO questions (subject, chapter, question, image, multipleChoice)
+                        VALUES ('$subjectId', '$chapterId', '$question', '$imageId', '$multipleChoice')";
+    }
+ 
     if ($conn->query($insertStatement) === TRUE) {
         echo "<br>Question has been added to the database.";
     } else {
