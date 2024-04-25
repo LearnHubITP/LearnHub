@@ -343,3 +343,7 @@ header {
 .year:hover{
   cursor: pointer;
 }
+
+.lead a:hover{
+  cursor: pointer;
+}
