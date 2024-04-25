@@ -235,7 +235,9 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: white;
   justify-content: center;
+  color: black;
 }
 
 .cont11 {
@@ -247,6 +249,7 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: var(--lightOrange);
   justify-content: center;
 }
 
