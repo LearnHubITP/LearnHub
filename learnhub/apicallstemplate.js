@@ -43,3 +43,27 @@ fetch("./php/api/api.php?chapter=Funktionen&note=")   //without specifying note
     .catch((error) => {
         console.log(error);
     });
+
+
+// get questions
+
+fetch("./php/api/getQuestion.php?chapter=Funktionen")  // gets all questions of a specified chapter  
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+
+// check answer
+// question = questionId, answer = inputed answer from the user
+fetch("./php/api/checkAnswer.php?question=11&answer=2")  // check answer  of a question
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
