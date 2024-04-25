@@ -1,7 +1,7 @@
 <?php
 
 #login data
-$_db_host = "192.168.111.23:3306";
+$_db_host = "localhost";
 $_db_database = "learnhub";
 $_db_username = "learnhub";
 $_db_password = "learnhub";

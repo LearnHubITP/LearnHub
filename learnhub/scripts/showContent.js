@@ -1,6 +1,6 @@
 const MAX_SUBJECTS_TO_SHOW = 2;
 startValue = 0;
-chooseSubject()
+//chooseSubject()
 function chooseSubject(){
     fetch("./php/api/api.php?subject=")   // + subjectname, if you want a specific subject
     .then((response) => response.json())
@@ -21,7 +21,7 @@ function chooseSubject(){
                 <img src='${data.result[i].image}' alt="" srcset="">
                 <h1 style="margin-bottom: 5%;">${data.result[i].name}</h1>
                 <p class="lead">
-                    <a href="./content.html" class="learnMore3">Los geht's</a>
+                    <a onclick="chooseYear(${data.result[i].name}) " class="learnMore3">Los geht's</a>
                 </p>
             </div>`
 
@@ -38,4 +38,38 @@ function chooseSubject(){
         console.log(error);
     });
     
+}
+
+function saveSubj(actSubject){
+    localStorage['actSubject'] = JSON.stringify(actSubject);
+}
+
+function chooseYear(actSubject){
+    //save act subj in localstorage
+    saveSubj(actSubject);
+
+    fetch("./php/api/api.php?year=")  
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+        let html_code = ``
+        html_code += `<div id="alignShowing">
+                        <div id="course">
+                            <div id="gridWhatLearnhub">
+                            <div>
+                            <img src='${data.result[i].image}' alt="" srcset="">
+                            <h1 style="margin-bottom: 5%;">${data.result[i].name}</h1>
+                            <p class="lead">
+                                <a onclick="chooseYear(${data.result[i].name}) " class="learnMore3">Los geht's</a>
+                            </p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>`
+        document.getElementById('contentShow').innerHTML = html_code;
+        
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 }

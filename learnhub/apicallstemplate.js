@@ -1,6 +1,3 @@
-
-
-
 // get year
 
 fetch("./php/api/api.php?year=")   // + yearname, if you want a specific year
