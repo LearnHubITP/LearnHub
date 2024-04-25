@@ -37,13 +37,13 @@ if (isset($_GET["chapter"])){
                         }
 
                         $choices = [];
-                        if($question["multipleChoice"] != 1){
+                        if($question["multipleChoice"] != 0){
                             $sqlStatement = "SELECT * FROM choices WHERE question = " . $question["id"];
                             if($res2 =$conn->query($sqlStatement)){
                                 if($res2->num_rows > 0){
                                     
                                     while($choice = $res2->fetch_assoc()){
-                                        array_push($choices, $choice);
+                                        array_push($choices, $choice["choice"]);
                                     }
 
                                 }
@@ -65,3 +65,5 @@ if (isset($_GET["chapter"])){
         }
     }
 }
+
+echo json_encode($answer);
