@@ -367,3 +367,7 @@ header {
 #contentShow{
   padding-top: 15%;
 }
+
+body{
+  overflow-x: hidden;
+}

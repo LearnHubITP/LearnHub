@@ -1,0 +1,10 @@
+header{
+    height: 10vh;
+}
+body{
+    margin: 0;
+}
+header div img{
+    width: 5vw;
+    height: 100%;
+}
