@@ -102,17 +102,18 @@
 
 <body>
     <header class="mb-auto">
-        <div>
+        <div id="logoHeaderDiv">
             <img id="logoHeader" src="../img/learnHub_Logo.png" alt="" srcset="">
-            
+
         </div>
     </header>
 
     <main>
         <style>
-            body{
+            body {
                 background-color: var(--lightOrange);
             }
+
             .startbutton {
                 cursor: pointer;
                 width: 20%;
@@ -127,8 +128,36 @@
             .startbutton:hover {
                 background-color: var(--lightOrange);
             }
+
+            .mb-auto {
+                padding: 0;
+            }
+
+            #logoHeaderDiv,
+            header div img {
+                margin: .52%;
+                width: 4vw !important;
+                height: 4vw !important;
+            }
+            #logoHeaderDiv:hover,
+            header div img:hover{
+                cursor: pointer;
+            }
+
+            #logoHeader {
+                top: 0vw;
+            }
+
+            #alignShowing {
+                margin-top: 0;
+            }
+
+            #contentShow {
+                padding-top: 0;
+                margin-top: 5%;
+            }
         </style>
-        
+
         <!--choose subject-->
         <div id="contentShow">
             <!-- generated in showContent.js -->
@@ -136,4 +165,5 @@
 
     </main>
 </body>
+
 </html>
