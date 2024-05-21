@@ -31,5 +31,5 @@ function chooseYear(){
 
 function saveYear(actYear){
     localStorage['actYear'] = JSON.stringify(actYear);
-    window.open('../contentOutputHTML/chooseChapter.html', '_self');
+    window.open('../contentOutputHTML/outp.html', '_self');
 }
