@@ -372,3 +372,8 @@ body {
   overflow-x: hidden;
 }
 
+#logoHeader{
+  width: 4vw;
+  top: -0.05vw;
+  position: absolute;
+}
