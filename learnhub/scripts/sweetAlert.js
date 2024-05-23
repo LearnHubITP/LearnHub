@@ -9,3 +9,7 @@ function alertTeam(imgUrl, name, age, school){
         showConfirmButton: false
       });
 }
+
+function alertExam(Chapter){
+  // do something with alert
+}
