@@ -24,7 +24,6 @@ function showNote(){
 }
 
 
-function saveChapter(actChapter){
-    localStorage['actChapter'] = JSON.stringify(actChapter);
-    window.open('../contentOutputHTML/showNote.html', '_self');
+function openExamPopup(){
+    
 }
