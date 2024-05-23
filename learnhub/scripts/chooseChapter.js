@@ -15,7 +15,7 @@ function chooseChapter(){
                             <div>
                             <div><h3 id="headerYearSubj">${actYear}. Jahrgang: ${actSubject}</h3></div>`
             for(let i = 0; i < data.result.length; i++){
-                html_code += `<div onclick="saveYear('${data.result[i].name}')" class="year">${data.result[i].name}</div>`
+                html_code += `<div onclick="saveYear(${data.result[i].name})" class="year">${data.result[i].name}</div>`
             }
                                 
         html_code +=         `</div>
@@ -29,8 +29,7 @@ function chooseChapter(){
     });
 }
 
-
 function saveYear(actChapter){
-    localStorage['actSubject'] = JSON.stringify(actChapter);
+    localStorage['actChapter'] = JSON.stringify(actChapter);
     window.open('../contentOutputHTML/chooseYear.html', '_self');
 }
