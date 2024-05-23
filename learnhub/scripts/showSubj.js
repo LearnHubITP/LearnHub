@@ -2,7 +2,7 @@ const MAX_SUBJECTS_TO_SHOW = 2;
 startValue = 0;
 chooseSubject()
 function chooseSubject(){
-    fetch("../php/api/api.php?subject=")   // + subjectname, if you want a specific subject
+    fetch("./php/api/api.php?subject=")   // + subjectname, if you want a specific subject
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
@@ -18,7 +18,7 @@ function chooseSubject(){
                     i = 0;
                 }
                 html_code += `<div>
-                <img src='.${data.result[i].image}' alt="" srcset="">
+                <img src='./${data.result[i].image}' alt="" srcset="">
                 <h1 style="margin-bottom: 5%;">${data.result[i].name}</h1>
                 <p class="lead">
                     <a onclick="saveSubj('${data.result[i].name}') " class="learnMore3">Los geht's</a>
@@ -46,5 +46,5 @@ function chooseSubject(){
 
 function saveSubj(actSubject){
     localStorage['actSubject'] = JSON.stringify(actSubject);
-    window.open('../contentOutputHTML/chooseYear.html', '_self');
+    window.open('./contentOutputHTML/chooseYear.html', '_self');
 }
