@@ -48,27 +48,27 @@
         }
 
         .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
 
         .btn-bd-primary {
             --bd-violet-bg: #712cf9;
@@ -102,11 +102,16 @@
 
 <body>
     <header class="mb-auto">
-        <div id="logoHeaderDiv">
-            <img id="logoHeader" src="../img/learnHub_Logo.png" alt="" srcset="">
-
+        <div>
+          <img id="logoHeader" src="../img/learnHub_Logo.png" alt="" srcset="">
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link fw-bold py-1 px-0" href="../content.html">Content</a>
+            <a class="nav-link fw-bold py-1 px-0" href="../team.html">Team</a>
+          </nav>
         </div>
-    </header>
+      </header>
+      
 
     <main>
         <style>
@@ -133,20 +138,6 @@
                 padding: 0;
             }
 
-            #logoHeaderDiv,
-            header div img {
-                margin: .52%;
-                width: 4vw !important;
-                height: 4vw !important;
-            }
-            #logoHeaderDiv:hover,
-            header div img:hover{
-                cursor: pointer;
-            }
-
-            #logoHeader {
-                top: 0vw;
-            }
 
             #alignShowing {
                 margin-top: 0;
@@ -155,6 +146,19 @@
             #contentShow {
                 padding-top: 0;
                 margin-top: 5%;
+            }
+            header{
+                width: 100vw;
+            }
+            .mb-auto{
+                width: 100vw;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            nav{
+                display: grid;
+                grid-template-columns: auto auto auto;
             }
         </style>
 
