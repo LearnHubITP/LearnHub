@@ -18,6 +18,11 @@ function alertExam(Chapter){
     imageWidth: 200,
     imageHeight: 200,
     showCloseButton: true,
-    showConfirmButton: true
+    showConfirmButton: true,
+    confirmButtonText: "Starten"
+  }).then((result) => {
+    if(result.isConfirmed){
+      window.open("./exam.html", "_self");
+    }
   });
 }
