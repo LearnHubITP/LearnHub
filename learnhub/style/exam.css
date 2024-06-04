@@ -1,0 +1,23 @@
+#quizContainer{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 18%;
+    padding: 1%;
+    border: 2px solid var(--orange2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#question{
+    text-align: center;
+    color: white;
+}
+#questionImg{
+    height: 40vh;
+    margin-bottom: 2%;
+}
+#answerInput{
+    margin-right: 1.5%;
+}

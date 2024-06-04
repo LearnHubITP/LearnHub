@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="../style/cover.css">
     <link rel="stylesheet" href="../style/mode.css">
     <link rel="stylesheet" href="../style/colors.css">
+    <link rel="stylesheet" href="../style/exam.css">
 
     <link href="../bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../scripts/showNote.js" defer></script>
+    <script src="../scripts/exam.js" defer></script>
     <script src="../scripts/sweetAlert.js" defer></script>
 
     <style>
@@ -110,7 +111,7 @@
 <body>
     <header class="mb-auto">
         <div>
-            <a href="./chooseChapter.html">
+            <a href="./showNote.html">
                 <img id="logoHeader" src="../img/content/pfeil.jpg" alt="" srcset="">
             </a>
             <nav class="nav nav-masthead justify-content-center">
@@ -142,12 +143,20 @@
             }
         </style>
         
-        <!--choose subject-->
-        <div id="contentShow">
-            <!-- generated in showContent.js -->
+        <div id="quizContainer">
+            <h2 id="question">Hallo</h2>
+            <img id="questionImg" src="../img/content/buecher.jpg">
+            
+            <div id="answerInputContainer" style="display: flex">
+                <input type="text" id="answerInput">
+                <button onclick="nextQuestion()">Prüfen</button>
+            </div>
+            
+            <div id="answerContainerChoices">
+
+            </div>
         </div>
 
-        <img id="stopWatch" src="../img/content/stoppuhr.png" onclick="alertExam()">
 
     </main>
     <script src="../bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
