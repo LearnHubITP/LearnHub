@@ -21,3 +21,7 @@
 #answerInput{
     margin-right: 1.5%;
 }
+button{
+    position: relative;
+    top: 2%;
+}

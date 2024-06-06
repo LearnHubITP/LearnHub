@@ -144,17 +144,18 @@
         </style>
         
         <div id="quizContainer">
-            <h2 id="question">Hallo</h2>
+            <h2 id="currentQuestion">Hallo</h2>
+            <h3 id="question">Frage</h2>
             <img id="questionImg" src="../img/content/buecher.jpg">
             
             <div id="answerInputContainer" style="display: flex">
-                <input type="text" id="answerInput">
-                <button onclick="nextQuestion()">Prüfen</button>
+                <input type="text" id="answerInput" placeholder="Antwort">
             </div>
             
             <div id="answerContainerChoices">
 
             </div>
+            <button onclick="nextQuestion()">Prüfen</button>
         </div>
 
 
