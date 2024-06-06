@@ -11,7 +11,7 @@ function chooseSubject(){
         let html_code = ``
         html_code += `<div id="alignShowing">
                         <div id="course">
-                            <div id="gridWhatLearnhub">`
+                            <div id="gridWhatLearnhub" style="padding-top: 10%;">`
         for(let i = startValue; i < startValue + MAX_SUBJECTS_TO_SHOW; i++){
             if(i >= 0){
                 if(i >= data.result.length){

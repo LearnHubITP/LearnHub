@@ -28,7 +28,6 @@
 }
 
 #gridWhatLearnhub {
-  padding-top: 10%;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
