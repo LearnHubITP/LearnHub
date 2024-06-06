@@ -2,6 +2,8 @@ let questions;
 let currentQuestionIndex = -1;
 let questionsAnsweredRight = 0;
 
+let givenAnswers = [];
+
 let currentQuestion = document.getElementById('currentQuestion');
 let question = document.getElementById("question");
 let questionImg = document.getElementById("questionImg");
@@ -29,7 +31,7 @@ function loadQuestions() {
 function showNextQuestion() {
     currentQuestionIndex++;
     if(currentQuestionIndex >= questions.length){
-        //showResults();
+        showResult();
         return;
     }
     let currQuestion = questions[currentQuestionIndex];
@@ -77,6 +79,8 @@ function checkAnswer() {
         givenAnswer = answerInput.value;
     }
 
+    givenAnswers.push(givenAnswer);
+
     fetch(`../php/api/checkAnswer.php?question=${currQuestion.id}&answer=${givenAnswer}`)  
         .then((response) => response.json())
         .then((data) => {
@@ -89,4 +93,9 @@ function checkAnswer() {
         .catch((error) => {
             console.log(error);
         });
+}
+
+
+function showResult(){
+
 }

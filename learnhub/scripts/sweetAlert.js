@@ -13,7 +13,7 @@ function alertTeam(imgUrl, name, age, school){
 function alertExam(Chapter){
   Swal.fire({
     title: `Prüfungsmodus`,
-    html: `<p>Aufgaben müssen in einer vorgegebenen Zeit gelöst werden -> Lösungen und Lösungswege erfährt man erst danach.</p>`,
+    html: `<p>Aufgaben müssen in einer vorgegebenen Zeit gelöst werden -> Lösungen erfährt man erst danach.</p>`,
     imageUrl: `../img/content/prüfen.png`,
     imageWidth: 200,
     imageHeight: 200,
