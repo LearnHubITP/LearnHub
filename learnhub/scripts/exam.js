@@ -2,8 +2,10 @@ let questions;
 let currentQuestionIndex = -1;
 let questionsAnsweredRight = 0;
 
+let realAnswers = [];
 let givenAnswers = [];
 
+let quizContainer = document.getElementById('quizContainer');
 let currentQuestion = document.getElementById('currentQuestion');
 let question = document.getElementById("question");
 let questionImg = document.getElementById("questionImg");
@@ -72,10 +74,10 @@ function checkAnswer() {
         return;
     }
     let currQuestion = questions[currentQuestionIndex];
-    let givenAnswer;
+    let givenAnswer = "";
     if(currQuestion.choices.length > 0) {
         givenAnswer = document.querySelector('input[name="choice"]:checked').value;
-    } else {
+    } else if(answerInput.value != undefined){
         givenAnswer = answerInput.value;
     }
 
@@ -88,6 +90,7 @@ function checkAnswer() {
             if(data.response) {
                 questionsAnsweredRight++;
             }
+            realAnswers.push(data.answer);
             showNextQuestion();
         })
         .catch((error) => {
@@ -97,5 +100,31 @@ function checkAnswer() {
 
 
 function showResult(){
+    let answerStr = "";
+    for (let i = 0; i < questions.length; i++) {
+        answerStr += `
+            <h2>Aufgabe ${i+1}</h2>
+            <h3>${questions[i].question}</h3>
+        `
+        if(questions[i].img!= null){
+            answerStr += `
+                <img src="${questions[i].img}" width="200px">
+            `
+        }
+        answerStr += `
+            <p>Deine Antwort: ${givenAnswers[i]}</p>
+            <p>Richtige Antwort: ${realAnswers[i]}</p>
+        `
 
+        if(givenAnswers[i] == realAnswers[i]){
+            answerStr += `
+                <p style="color: green">Richtig!</p>
+            `
+        } else {
+            answerStr += `
+                <p style="color: red">Falsch!</p>
+            `
+        }
+    }
+    quizContainer.innerHTML = answerStr;
 }

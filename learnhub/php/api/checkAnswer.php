@@ -4,7 +4,8 @@ require "../connectToDB.php";
 // DEFAULT ANSWER
 $answer = array(
     "code" => 404,
-    "result" => false
+    "result" => false,
+    "answer" => ""
 );
 
 // GET QUESTIONS FOR CHAPTER NAME
@@ -17,6 +18,7 @@ if (isset($_GET["question"]) && isset($_GET["answer"])){
             $answer["code"] = 200;
             $actualAnswer = $res->fetch_assoc()["answer"];
 
+            $answer["answer"] = $actualAnswer;
             if($givenAnswer == $actualAnswer){
                 $answer["result"] = true;
             }
