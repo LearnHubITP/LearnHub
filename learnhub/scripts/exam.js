@@ -1,5 +1,6 @@
 let questions;
-let currentQuestionIndex = 0;
+let currentQuestionIndex = -1;
+let questionsAnsweredRight = 0;
 
 let currentQuestion = document.getElementById('currentQuestion');
 let question = document.getElementById("question");
@@ -26,6 +27,11 @@ function loadQuestions() {
 
 
 function showNextQuestion() {
+    currentQuestionIndex++;
+    if(currentQuestionIndex >= questions.length){
+        //showResults();
+        return;
+    }
     let currQuestion = questions[currentQuestionIndex];
     currentQuestion.innerHTML = "Aufgabe " + (currentQuestionIndex+1);
     question.innerHTML = currQuestion.question;
@@ -41,10 +47,46 @@ function showNextQuestion() {
     if (currQuestion.choices.length > 0){
         answerInputContainer.style.display = "none";
         answerContainerChoices.style.display = "block";
+
+        let choices = currQuestion.choices;
+        let answerStr = "";
+        for (let i = 0; i < choices.length; i++) {
+            answerStr += `
+                <input type="radio" name="choice" id="choice${i}" value="${choices[i]}">
+                <label for="choice${i}">${choices[i]}</label><br>
+            `
+        }
+        answerContainerChoices.innerHTML = answerStr;
     } else {
         answerContainerChoices.style.display = "none";
         answerInputContainer.style.display = "flex";
     }
 
     answerInput.value = "";
+}
+
+function checkAnswer() {
+    if(currentQuestionIndex >= questions.length) {
+        return;
+    }
+    let currQuestion = questions[currentQuestionIndex];
+    let givenAnswer;
+    if(currQuestion.choices.length > 0) {
+        givenAnswer = document.querySelector('input[name="choice"]:checked').value;
+    } else {
+        givenAnswer = answerInput.value;
+    }
+
+    fetch(`../php/api/checkAnswer.php?question=${currQuestion.id}&answer=${givenAnswer}`)  
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            if(data.response) {
+                questionsAnsweredRight++;
+            }
+            showNextQuestion();
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 }
