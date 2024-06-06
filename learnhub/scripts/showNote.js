@@ -12,10 +12,11 @@ function showNote(){
         object.type = 'application/pdf';
         object.width = '100%';
         object.height = '135%';
-        object.style.marginTop = "-7.3%"
+        object.style.marginTop = "38%"
 
         // Füge das <object>-Element dem Container in der Webseite hinzu
         var container = document.getElementById('contentShow');
+        container.style.height = '150vh'
         container.appendChild(object);
     })
     .catch((error) => {
