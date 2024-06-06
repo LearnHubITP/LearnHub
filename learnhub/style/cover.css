@@ -28,6 +28,7 @@
 }
 
 #gridWhatLearnhub {
+  padding-top: 10%;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -282,14 +283,15 @@ header {
   padding-top: 15vh;
   overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #alignShowing {
-  margin-top: 20vh;
+  padding-top: 0;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -364,9 +366,7 @@ header {
   height: 100%;
 }
 
-#contentShow {
-  padding-top: 15%;
-}
+
 
 body {
   overflow-x: hidden;
