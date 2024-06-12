@@ -29,7 +29,7 @@ if (isset($_GET["chapter"])){
                         if($imageId != null && $res2 =$conn->query($sqlStatement)){
                             if($res2->num_rows > 0){
                                 
-                                $image = $res->fetch_assoc();
+                                $image = $res2->fetch_assoc();
                                 $imagePath = $image["path"];
                                 $question["image"] = $imagePath;
 

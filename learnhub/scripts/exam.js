@@ -40,8 +40,8 @@ function showNextQuestion() {
     currentQuestion.innerHTML = "Aufgabe " + (currentQuestionIndex+1);
     question.innerHTML = currQuestion.question;
 
-    if (currQuestion.img != null){
-        questionImg.src = currQuestion.img;
+    if (currQuestion.image != null){
+        questionImg.src = currQuestion.image;
         questionImg.style.display = "block";
     } else {
         questionImg.src = "";
