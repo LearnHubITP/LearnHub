@@ -87,9 +87,6 @@ function checkAnswer() {
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
-            if(data.response) {
-                questionsAnsweredRight++;
-            }
             realAnswers.push(data.answer);
             showNextQuestion();
         })
@@ -106,9 +103,9 @@ function showResult(){
             <h2>Aufgabe ${i+1}</h2>
             <h3>${questions[i].question}</h3>
         `
-        if(questions[i].img!= null){
+        if(questions[i].image != null){
             answerStr += `
-                <img src="${questions[i].img}" width="200px">
+                <img src="${questions[i].image}" width="200px">
             `
         }
         answerStr += `
@@ -117,6 +114,7 @@ function showResult(){
         `
 
         if(givenAnswers[i] == realAnswers[i]){
+            questionsAnsweredRight++;
             answerStr += `
                 <p style="color: green">Richtig!</p>
             `
@@ -126,5 +124,16 @@ function showResult(){
             `
         }
     }
+    let procent = questionsAnsweredRight / questions.length;
+    let score = "";
+    if(procent < 0.50) score = "Nicht Genügend"
+    else if(procent < 0.625) score = "Genügend"
+    else if(procent < 0.75) score = "Befriedigend"
+    else if(procent < 0.875) score = "Gut"
+    else score = "Sehr Gut"
+    answerStr += `
+        <p style="font-size: 1.6em; text-align: center;">Deine Punktzahl: ${Math.floor(procent*100)}% <br>
+        <span style="font-size: 1.8em; color: white;">${score}</span></p>
+    `
     quizContainer.innerHTML = answerStr;
 }
