@@ -26,7 +26,7 @@ if (isset($_GET["chapter"])){
                         $imageId = $question["image"];
 
                         $sqlStatement = "SELECT * FROM images WHERE id = '$imageId'";
-                        if($res2 =$conn->query($sqlStatement)){
+                        if($imageId != null && $res2 =$conn->query($sqlStatement)){
                             if($res2->num_rows > 0){
                                 
                                 $image = $res->fetch_assoc();
