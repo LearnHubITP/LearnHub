@@ -34,8 +34,8 @@ if (isset($_GET["chapter"])){
                                 $question["image"] = $imagePath;
 
                             }
-                        }
-
+                        } 
+                        
                         $choices = [];
                         if($question["multipleChoice"] != 0){
                             $sqlStatement = "SELECT * FROM choices WHERE question = " . $question["id"];
@@ -49,8 +49,7 @@ if (isset($_GET["chapter"])){
                                 }
                             }
                         }
-                        $question["choices"] = $choices;
-
+                        $question["choices"] = $choices; 
 
                         array_push(
                             $answer["result"], 
