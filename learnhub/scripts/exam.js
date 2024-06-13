@@ -2,6 +2,8 @@ let questions;
 let currentQuestionIndex = -1;
 let questionsAnsweredRight = 0;
 
+let quizFinished = false;
+
 let realAnswers = [];
 let givenAnswers = [];
 
@@ -13,6 +15,12 @@ let answerInputContainer = document.getElementById("answerInputContainer");
 let answerContainerChoices = document.getElementById("answerContainerChoices");
 let answerInput = document.getElementById("answerInput");
 
+let timer = document.getElementById("timer");
+let minutes = document.getElementById("minutes");
+let seconds = document.getElementById("seconds");
+
+let time = 50*60;
+
 loadQuestions();
 
 function loadQuestions() {
@@ -22,11 +30,45 @@ function loadQuestions() {
         .then((data) => {
             console.log(data);
             questions = data.result;
+            updateTimerString()
             showNextQuestion() 
         })
         .catch((error) => {
             console.log(error);
         });
+}
+
+function updateTimerString(){
+    if(!quizFinished){
+        minutes.innerHTML = formatTimerString(Math.floor(time/60))
+        seconds.innerHTML = formatTimerString(time%60)
+
+        if(time > 0) {
+            setTimeout(() => {
+                time--;
+                updateTimerString();
+            }, 1000);   
+        } else {
+            let answeredQuestions = currentQuestionIndex+1;
+            checkAnswer();
+
+            for(let i=answeredQuestions; i < questions.length; i++) {
+                givenAnswers.push("");
+                fetch(`../php/api/checkAnswer.php?question=${questions[i].id}&answer=`)  
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log(data);
+                        realAnswers.push(data.answer);
+                        if(i == questions.length-1){
+                            showResult();
+                        }
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+                }
+            }
+    }
 }
 
 
@@ -76,7 +118,11 @@ function checkAnswer() {
     let currQuestion = questions[currentQuestionIndex];
     let givenAnswer = "";
     if(currQuestion.choices.length > 0) {
-        givenAnswer = document.querySelector('input[name="choice"]:checked').value;
+        try{
+            givenAnswer = document.querySelector('input[name="choice"]:checked').value;
+        } catch(e){
+            givenAnswer = "";
+        }
     } else if(answerInput.value != undefined){
         givenAnswer = answerInput.value;
     }
@@ -97,6 +143,7 @@ function checkAnswer() {
 
 
 function showResult(){
+    quizFinished = true;
     let answerStr = "";
     for (let i = 0; i < questions.length; i++) {
         answerStr += `
@@ -136,4 +183,12 @@ function showResult(){
         <span style="font-size: 1.8em; color: white;">${score}</span></p>
     `
     quizContainer.innerHTML = answerStr;
+}
+
+function formatTimerString(amount){
+    if (amount < 10) {
+        return "0" + amount;
+    } else {
+        return amount;
+    }
 }
