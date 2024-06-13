@@ -35,7 +35,7 @@ if (isset($_GET["chapter"])){
 
                             }
                         } 
-
+                        
                         $choices = [];
                         if($question["multipleChoice"] != 0){
                             $sqlStatement = "SELECT * FROM choices WHERE question = " . $question["id"];
@@ -51,11 +51,11 @@ if (isset($_GET["chapter"])){
                         }
                         $question["choices"] = $choices; 
 
-
                         array_push(
                             $answer["result"], 
                             $question
                         );
+                        echo json_encode($answer);
 
                     }
 
