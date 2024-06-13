@@ -34,7 +34,7 @@ if (isset($_GET["chapter"])){
                                 $question["image"] = $imagePath;
 
                             }
-                        }
+                        } 
 
                         $choices = [];
                         if($question["multipleChoice"] != 0){
@@ -49,7 +49,7 @@ if (isset($_GET["chapter"])){
                                 }
                             }
                         }
-                        $question["choices"] = $choices;
+                        $question["choices"] = $choices; 
 
 
                         array_push(

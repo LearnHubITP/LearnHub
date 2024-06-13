@@ -105,7 +105,7 @@ function showResult(){
         `
         if(questions[i].image != null){
             answerStr += `
-                <img src="${questions[i].image}" width="200px">
+                <img src=".${questions[i].image}" width="200px">
             `
         }
         answerStr += `
