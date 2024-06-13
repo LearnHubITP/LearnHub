@@ -281,7 +281,7 @@ header {
   padding-top: 15vh;
   overflow-x: hidden;
   width: 100vw;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,10 +339,14 @@ header {
   margin-right: 0;
   width: 50vw;
   border-radius: 2vw;
+  transition: all 0.2s linear;
 }
 
 .year:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  -webkit-box-shadow: 1px 1px 30px 12px rgba(212, 137, 0, 0.78);
+  box-shadow: 1px 1px 30px 12px rgba(212, 137, 0, 0.78);
 }
 
 .lead a:hover {
@@ -370,7 +374,7 @@ body {
   overflow-x: hidden;
 }
 
-#logoHeader{
+#logoHeader {
   width: 4vw;
   top: -0.05vw;
   position: absolute;
@@ -378,7 +382,7 @@ body {
 
 
 
-#stopWatch{
+#stopWatch {
   width: 5%;
   opacity: 0.3;
   position: fixed;
@@ -387,7 +391,8 @@ body {
   transition: 0.5s;
   cursor: pointer;
 }
-#stopWatch:hover{
+
+#stopWatch:hover {
   opacity: 1;
   transition: 0.5s;
 }
