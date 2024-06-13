@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="./style/cover.css">
   <link rel="stylesheet" href="./style/mode.css">
   <link rel="stylesheet" href="./style/colors.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href="./bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -197,23 +198,18 @@
     </div>
   </main>
   <script src="./bootstrap/assets/dist/js/bootstrap.bundle.min.js"></script>
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
   
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      </a>
-  
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="./content.html" class="nav-link px-2 text-body-secondary">Content</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="./team.html" class="nav-link px-2 text-body-secondary">Team</a></li>
-      </ul>
-    </footer>
-  </div>
 </body>
+<div id="footer-placeholder"></div>
+<script>
+  function loadFooter() {
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer-placeholder').innerHTML = data;
+          });
+  }
+  window.onload = loadFooter;
+</script>
 
 </html>
