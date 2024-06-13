@@ -55,7 +55,6 @@ if (isset($_GET["chapter"])){
                             $answer["result"], 
                             $question
                         );
-                        echo json_encode($answer);
 
                     }
 

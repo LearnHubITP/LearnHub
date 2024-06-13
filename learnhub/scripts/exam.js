@@ -18,7 +18,7 @@ loadQuestions();
 function loadQuestions() {
     let actChapter = JSON.parse(localStorage['actChapter'])
     fetch("../php/api/getQuestion.php?chapter=" + actChapter)  
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((data) => {
             console.log(data);
             questions = data.result;
