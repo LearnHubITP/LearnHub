@@ -98,6 +98,14 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
+    .personContainer{
+      z-index: 1000;
+    }
+    .personContainer:hover{
+      transform: scale(1.03);
+      transition: all 0.2s linear;
+      box-shadow: 20px 30px rgba(0, 0, 0, 0.097);
+    }
   </style>
 
 
@@ -124,7 +132,7 @@
 
   <div id="mainBackground">
     <div id="contentTeam">
-      <h1 style="margin-top: 2%; color: black;  font-size: 4.5vw;
+      <h1 style="margin-top: 2%; color: white;  font-size: 4.5vw;
       text-shadow: 10px 12px rgba(255, 255, 255, 0.119);
       text-align: center;">Lernen Sie uns kennen:</h1>
       <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
@@ -137,10 +145,10 @@
             <!--<div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>-->
           </div>
         </div>
-        <div class="personContainer me-md-3 pt-3 pb-5 px-3 pt-md-5 px-md-5  bg-body-tertiary  text-center overflow-hidden">
+        <div class="personContainer me-md-3 pt-3 pb-5 px-3 pt-md-5 px-md-5  bg-body-tertiary  text-center overflow-hidden ">
           <div class="personContent" onclick="alertTeam('lien', 'Lien Hochbichler', 17, 'HTL Leonding / Medientechnik')">
             <div class="">
-              <h2 class="display-5">Lien Hochbichler</h2>
+              <h2 class="display-5" >Lien Hochbichler</h2>
             </div>
             <img src="./img/lienImg.jpg" alt="" style="width: 30%;">
             <!--<div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>-->
