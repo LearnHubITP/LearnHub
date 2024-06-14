@@ -19,7 +19,9 @@ function alertExam(Chapter){
     imageHeight: 200,
     showCloseButton: true,
     showConfirmButton: true,
-    confirmButtonText: "Starten"
+    confirmButtonText: "Starten",
+    confirmButtonColor: "var(--orange2)",
+    confirmButtonColor2: "var(--orange3)"
   }).then((result) => {
     if(result.isConfirmed){
       window.open("./exam.html", "_self");
