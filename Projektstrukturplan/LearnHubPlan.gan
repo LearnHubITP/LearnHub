@@ -50,29 +50,26 @@
                 <depend id="7" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="6" uid="070cb02786f24d31ace1fc0e12ac5e11" name="Design" color="#ff9999" meeting="false" start="2024-01-11" duration="73" complete="72" expand="true">
+        <task id="6" uid="070cb02786f24d31ace1fc0e12ac5e11" name="Design" color="#ff9999" meeting="false" start="2024-01-11" duration="73" complete="100" expand="true">
             <task id="7" uid="7d8a9ff05ca84c32ac2b996b72aa5eb6" name="Content erstellen" color="#ff9999" meeting="false" start="2024-04-09" duration="10" complete="100" expand="true">
                 <depend id="9" type="4" difference="0" hardness="Strong"/>
             </task>
             <task id="8" uid="45c79392a60944cbacab015567bf932a" name="Texte erstellen" color="#ff9999" meeting="false" start="2024-01-12" duration="5" complete="100" expand="true"/>
-            <task id="9" uid="ade49c96f0fb424da1894f757e5a9810" name="Design Template erweitern" color="#ff9999" meeting="false" start="2024-03-05" duration="25" complete="50" expand="true"/>
+            <task id="9" uid="ade49c96f0fb424da1894f757e5a9810" name="Design Template erweitern" color="#ff9999" meeting="false" start="2024-03-05" duration="25" complete="100" expand="true"/>
             <task id="10" uid="b9349a64d1cc425a89424c35ea47b7ba" name="Farbschema" color="#ff9999" meeting="false" start="2024-01-11" duration="5" complete="100" expand="true"/>
             <task id="11" uid="7ba9c3743ac041e69fe3935245a1d44d" name="Teambilder" color="#ff9999" meeting="false" start="2024-01-12" duration="1" complete="100" expand="true"/>
         </task>
-        <task id="12" uid="ea059d5275cf441ea7352ae17b7e2cd0" name="Entwicklung" color="#ff9900" meeting="false" start="2024-03-21" duration="40" complete="64" expand="true">
+        <task id="12" uid="ea059d5275cf441ea7352ae17b7e2cd0" name="Entwicklung" color="#ff9900" meeting="false" start="2024-03-21" duration="40" complete="100" expand="true">
             <task id="13" uid="df1b7b79bba44a91bccfa054b360de9b" name="Seitengrundstruktur erstellen" color="#ff9900" meeting="false" start="2024-03-21" duration="25" complete="100" expand="true"/>
-            <task id="14" uid="bdc7a83c84d84df0aa157475ce28cea3" name="Funktionalität einabuen" color="#ff9900" meeting="false" start="2024-03-21" duration="30" complete="0" expand="true">
+            <task id="14" uid="bdc7a83c84d84df0aa157475ce28cea3" name="Funktionalität einabuen" color="#ff9900" meeting="false" start="2024-03-21" duration="30" complete="100" expand="true">
                 <depend id="15" type="1" difference="0" hardness="Strong"/>
             </task>
             <task id="15" uid="ba0657d7276543f0a47383df19a87f4b" name="Datenbank erstellen + befüllen" color="#ff9900" meeting="false" start="2024-03-21" duration="10" complete="100" expand="true"/>
-            <task id="16" uid="5747ce58bd644900af6d337740b42bd3" name="Webseite mit DB verbinden" color="#ff9900" meeting="false" start="2024-04-18" duration="20" complete="100" expand="true">
-                <depend id="18" type="2" difference="0" hardness="Strong"/>
-            </task>
+            <task id="16" uid="5747ce58bd644900af6d337740b42bd3" name="Webseite mit DB verbinden" color="#ff9900" meeting="false" start="2024-04-18" duration="20" complete="100" expand="true"/>
         </task>
-        <task id="17" uid="0658f359fd7e4260bfa9fa90d94e5734" name="Marketing" color="#00ffcc" meeting="false" start="2024-04-08" duration="50" complete="41" expand="true">
-            <task id="18" uid="d91ed7b390104aa8815cfe49a1864ec6" name="Flyer" color="#00ffcc" meeting="false" start="2024-05-16" duration="5" complete="0" expand="true"/>
-            <task id="19" uid="b882a356f3af4f5488156ee3d2319905" name="Präsentation" color="#00ffcc" meeting="false" start="2024-04-08" duration="50" complete="50" expand="true"/>
-            <task id="20" uid="4c33dce190524e99b79abf7aa4c9837f" name="Veröffentlichung (GitHub)" color="#00ffcc" meeting="false" start="2024-06-10" duration="5" complete="0" expand="true">
+        <task id="17" uid="0658f359fd7e4260bfa9fa90d94e5734" name="Marketing" color="#00ffcc" meeting="false" start="2024-04-08" duration="50" complete="100" expand="true">
+            <task id="19" uid="b882a356f3af4f5488156ee3d2319905" name="Präsentation" color="#00ffcc" meeting="false" start="2024-04-08" duration="50" complete="100" expand="true"/>
+            <task id="20" uid="4c33dce190524e99b79abf7aa4c9837f" name="Veröffentlichung (GitHub)" color="#00ffcc" meeting="false" start="2024-06-10" duration="5" complete="100" expand="true">
                 <depend id="19" type="3" difference="0" hardness="Strong"/>
             </task>
         </task>
@@ -94,7 +91,6 @@
         <allocation task-id="10" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="11" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="13" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
-        <allocation task-id="18" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="19" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
         <allocation task-id="20" resource-id="0" function="Default:1" responsible="false" load="100.0"/>
         <allocation task-id="4" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
@@ -106,7 +102,6 @@
         <allocation task-id="10" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="11" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="13" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="18" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="19" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="20" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
@@ -116,7 +111,6 @@
         <allocation task-id="9" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="10" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="13" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="18" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="19" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="2" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="3" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
