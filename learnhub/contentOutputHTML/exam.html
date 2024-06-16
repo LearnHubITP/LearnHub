@@ -144,11 +144,14 @@
         </style>
         
         <div id="quizContainer">
-            <p id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+            <div id="exampleMeter" ></div>
+            <div id="exampleMeter2"></div>
+            <div id="currentQuestion"></div>
 
-            <h2 id="currentQuestion"></h2>
-            <h3 id="question"></h2>
+            <div id="timer"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+
             <img id="questionImg" src="">
+            <h3 id="question"></h2>
             
             <div id="answerInputContainer" style="display: flex">
                 <input type="text" id="answerInput" placeholder="Antwort">
@@ -157,7 +160,7 @@
             <div id="answerContainerChoices">
                 
             </div>
-            <button onclick="checkAnswer()">Prüfen</button>
+            <button onclick="checkAnswer()" id="checkButton">Prüfen</button>
         </div>
 
 

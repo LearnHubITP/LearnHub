@@ -71,15 +71,20 @@ function updateTimerString(){
     }
 }
 
-
+let meterElement = document.getElementById('exampleMeter');
+let meterElement2= document.getElementById("exampleMeter2")
+let k
 function showNextQuestion() {
+    k=100/questions.length;
+
+    meterElement2.style.width=k*d+"%";
     currentQuestionIndex++;
     if(currentQuestionIndex >= questions.length){
         showResult();
         return;
     }
     let currQuestion = questions[currentQuestionIndex];
-    currentQuestion.innerHTML = "Aufgabe " + (currentQuestionIndex+1);
+    currentQuestion.innerHTML = "Aufgabe "+(currentQuestionIndex+1)+" von "+questions.length;
     question.innerHTML = currQuestion.question;
 
     if (currQuestion.image != null){
@@ -110,8 +115,10 @@ function showNextQuestion() {
 
     answerInput.value = "";
 }
-
+let d=0;
 function checkAnswer() {
+    d++;
+    meterElement2.style.width=k*d+"%";
     if(currentQuestionIndex >= questions.length) {
         return;
     }
@@ -147,12 +154,11 @@ function showResult(){
     let answerStr = "";
     for (let i = 0; i < questions.length; i++) {
         answerStr += `
-            <h2>Aufgabe ${i+1}</h2>
-            <h3>${questions[i].question}</h3>
+            <h3>${i+1}) ${questions[i].question}</h3>
         `
         if(questions[i].image != null){
             answerStr += `
-                <img src=".${questions[i].image}" width="200px">
+                <img src=".${questions[i].image}" width="30%">
             `
         }
         answerStr += `
@@ -179,8 +185,8 @@ function showResult(){
     else if(procent < 0.875) score = "Gut"
     else score = "Sehr Gut"
     answerStr += `
-        <p style="font-size: 1.6em; text-align: center;">Deine Punktzahl: ${Math.floor(procent*100)}% <br>
-        <span style="font-size: 1.8em; color: white;">${score}</span></p>
+        <p style="font-size: 1.6em; text-align: center; color: black;">Deine Punktzahl: ${Math.floor(procent*100)}% <br>
+        <span style="font-size: 1.8em; color:black;">${score}</span></p>
     `
     quizContainer.innerHTML = answerStr;
 }
