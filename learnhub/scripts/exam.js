@@ -187,6 +187,7 @@ function showResult(){
     answerStr += `
         <p style="font-size: 1.6em; text-align: center; color: black;">Deine Punktzahl: ${Math.floor(procent*100)}% <br>
         <span style="font-size: 1.8em; color:black;">${score}</span></p>
+        <a id=backbtn href="./chooseYear.html">Zu Mitschriften</a>
     `
     quizContainer.innerHTML = answerStr;
 }

@@ -106,3 +106,22 @@ p{
     margin-bottom: 2%;
     color: var(--grey);
 }
+#backbtn{
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    width: 15vw;
+    height: 8vh;
+    background-color: var(--orange2);
+    transition: 0.5s ease-in-out;
+    border: none;
+    font-size: 1.5vw;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 1vw;
+}
+#backbtn:hover{
+    background-color: var(--orange);
+    transition: 0.5s ease-in-out;
+}
