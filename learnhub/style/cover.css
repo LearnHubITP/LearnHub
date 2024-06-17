@@ -401,3 +401,7 @@ body {
   opacity: 1;
   transition: 0.5s;
 }
+
+#secHomeWhat{
+  padding-bottom: 4vw;
+}
