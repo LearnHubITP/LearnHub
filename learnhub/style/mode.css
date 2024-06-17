@@ -117,3 +117,6 @@ body {
 #chooseYear{
     background-color: var(--lightOrange) !important;
 }
+.nav-masthead .nav-link:hover{
+    color: #fff;
+}
